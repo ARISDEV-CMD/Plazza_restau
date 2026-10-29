@@ -134,7 +134,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 <img
                   className="w-full h-full object-cover rounded-full transition-transform duration-700 hover:scale-105"
                   alt="Plat de poulet pané doré et alloco La Plazza"
-                  src="https://upload.wikimedia.org/wikipedia/commons/2/20/Broasted_chicken_in_black_background.png"
+                  src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Broasted_Chicken_and_Rice%2C.jpg"
                 />
               </div>
 
