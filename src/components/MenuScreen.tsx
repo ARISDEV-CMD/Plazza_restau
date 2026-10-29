@@ -86,7 +86,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] h-[260px] bg-[#e8911a]/10 rounded-full blur-3xl pointer-events-none"></div>
 
         {/* Title & Brand Header */}
-        <section className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-6 sm:pt-8 pb-4 text-center relative z-10">
+        <section className="menu-heading-photo max-w-[1200px] mx-auto px-4 sm:px-6 pt-6 sm:pt-8 pb-4 text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#fae3dc] mb-2 shadow-sm border border-[#ffe9e2]">
             <span className="material-symbols-outlined text-[#895200] text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
               restaurant_menu
