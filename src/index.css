@@ -209,26 +209,24 @@
 }
 
 
-/* La Plazza hero photography: slow, restrained movement */
+/* La Plazza hero photography: visible food image + gentle movement */
 .hero-food-backdrop {
   position: absolute;
   inset: -3%;
   z-index: 0;
   pointer-events: none;
-  background-image: url("https://images.pexels.com/photos/31372389/pexels-photo-31372389.jpeg?auto=compress&cs=tinysrgb&w=2000");
+  background-image:
+    linear-gradient(100deg, rgba(255,248,246,.78) 0%, rgba(255,241,236,.62) 48%, rgba(255,233,226,.48) 100%),
+    url("https://images.pexels.com/photos/17086343/pexels-photo-17086343.jpeg?auto=compress&cs=tinysrgb&w=2000");
   background-size: cover;
-  background-position: center 46%;
-  opacity: 0.16;
+  background-position: center 48%;
+  opacity: 1;
   transform-origin: center;
   animation: hero-backdrop-drift 32s ease-in-out infinite alternate;
 }
 
 .hero-food-wash {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: linear-gradient(100deg, rgba(255,248,246,.97) 0%, rgba(255,241,236,.88) 48%, rgba(255,233,226,.72) 100%);
+  display: none;
 }
 
 .hero-food-float {
