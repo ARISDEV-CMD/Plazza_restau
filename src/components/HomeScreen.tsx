@@ -26,6 +26,9 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
     <div className="flex flex-col w-full animate-in fade-in duration-300">
       {/* 1. HERO SECTION */}
       <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#fff8f6] via-[#fff1ec] to-[#ffe9e2] py-12 lg:py-20">
+        {/* Subtle food photography backdrop with a warm readability overlay */}
+        <div className="hero-food-backdrop" aria-hidden="true" />
+        <div className="hero-food-wash" aria-hidden="true" />
         {/* Decorative circular watermark ring */}
         <div className="pointer-events-none absolute -top-24 -right-24 h-[580px] w-[580px] rounded-full opacity-20">
           <svg className="h-full w-full text-[#e8911a]" fill="none" stroke="currentColor" viewBox="0 0 500 500">
@@ -127,11 +130,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               <div className="absolute h-[300px] w-[300px] sm:h-[380px] sm:w-[380px] rounded-full bg-[#e8911a]/15"></div>
 
               {/* Circular Hero Plate */}
-              <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] rounded-full overflow-hidden shadow-2xl bg-[#fff1ec] flex items-center justify-center p-2 border-4 border-white">
+              <div className="hero-food-float relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] rounded-full overflow-hidden shadow-2xl bg-[#fff1ec] flex items-center justify-center p-2 border-4 border-white">
                 <img
                   className="w-full h-full object-cover rounded-full transition-transform duration-700 hover:scale-105"
                   alt="Plat de poulet pané doré et alloco La Plazza"
-                  src={RESTAURANT_INFO.heroImageUrl}
+                  src="https://upload.wikimedia.org/wikipedia/commons/2/20/Broasted_chicken_in_black_background.png"
                 />
               </div>
 
