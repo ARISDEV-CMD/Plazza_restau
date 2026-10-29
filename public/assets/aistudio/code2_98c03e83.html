@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#59431d", "error": "#ba1a1a", "background": "#fff8f6", "inverse-on-surface": "#ffede7", "tertiary-container": "#bea071", "on-error": "#ffffff", "surface-variant": "#f4ded7", "surface-dim": "#ebd5ce", "tertiary-fixed": "#ffdeac", "on-primary-fixed": "#2c1700", "primary-fixed-dim": "#ffb86a", "surface-bright": "#fff8f6", "on-secondary-fixed": "#410004", "on-error-container": "#93000a", "on-tertiary-fixed": "#281900", "inverse-primary": "#ffb86a", "secondary-fixed": "#ffdad7", "on-surface-variant": "#534435", "secondary": "#b52529", "surface": "#fff8f6", "on-secondary": "#ffffff", "on-primary-container": "#573200", "surface-container": "#ffe9e2", "error-container": "#ffdad6", "surface-container-highest": "#f4ded7", "on-secondary-fixed-variant": "#920315", "primary-container": "#e8911a", "surface-container-high": "#fae3dc", "surface-container-lowest": "#ffffff", "tertiary-fixed-dim": "#e2c290", "primary": "#895200", "on-primary": "#ffffff", "tertiary": "#735a32", "on-tertiary": "#ffffff", "on-tertiary-container": "#4c3712", "secondary-container": "#fe5b58", "secondary-fixed-dim": "#ffb3ae", "on-surface": "#241915", "on-background": "#241915", "inverse-surface": "#3b2d29", "outline": "#867463", "on-secondary-container": "#600009", "surface-container-low": "#fff1ec", "outline-variant": "#d9c3af", "on-primary-fixed-variant": "#683d00", "surface-tint": "#895200", "primary-fixed": "#ffdcbc" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.25rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "space-md": "1rem", "margin": "1.5rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-lg-mobile": [ "Epilogue" ], "label-md": [ "Epilogue" ], "label-sm": [ "Inter" ], "headline-lg": [ "Epilogue" ], "display-mobile": [ "Epilogue" ], "body-sm": [ "Inter" ], "body-lg": [ "Inter" ], "body-md": [ "Inter" ], "price-tag": [ "Epilogue" ], "headline-sm": [ "Epilogue" ], "script-accent": [ "Epilogue" ], "headline-md": [ "Epilogue" ], "display": [ "Epilogue" ] }, "fontSize": { "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "0", "fontWeight": "700" } ], "label-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "price-tag": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "600" } ], "script-accent": [ "22px", { "lineHeight": "30px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "0", "fontWeight": "600" } ], "display": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_4px_16px_rgba(31,20,16,0.06)]"><div class="h-20 max-w-[1200px] mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="capture_logo.PNG" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WdrjdyeHm3u4WdG-Nkg3SRgEhRUM2D1s92zBUfUHhenF-1zk49KYbkbeiE2nKRu478BFWliN1VAyKI4j23UYodQUBgjcYEtpq9KuoRV_WmpA23BpiNdqZMQP5J4VQsDJbnjKUbUq6ngCnFACZ5DymcPby9kGIM8BzdzuKCKA780wUEKrb3ElZnNZok3PxQT5eYU9U7sznjhBjoSyk2CWo-o13ioD8-_e45HfW27FATSWIyPBCxXky2BZY"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">La Plazza</span><span class="font-label-sm text-label-sm text-on-surface-variant">Ndogbong · Douala</span></div><div class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Ouvert · jusqu'à 22 h</span></div></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="accueil" href="#">Accueil</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu" href="#">Menu</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="reserver" href="#">Réserver</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="galerie" href="#">Galerie</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md shrink-0"><a class="hidden xl:flex items-center gap-1.5 text-on-surface font-label-md text-label-md hover:text-primary transition-colors" href="tel:+237678184930"><span class="material-symbols-outlined text-[18px] text-primary">call</span><span>+237 678 18 49 30</span></a><button aria-label="Panier" class="relative p-2 rounded-full text-on-surface hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute top-1 right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm leading-none font-bold">0</span></button><a class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-[0_2px_8px_rgba(232,145,26,0.25)] hover:bg-primary hover:text-on-primary active:scale-[0.98] transition-all" data-path="menu" href="#">Commander</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Top Decorative Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] h-[260px] bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Title & Brand Header -->
+<section class="max-w-[1200px] mx-auto px-margin pt-space-lg pb-space-md text-center relative z-10">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Carte Gastronomique Douala</span>
+</div>
+<div class="relative inline-block mx-auto mb-2">
+<h1 class="font-display text-display text-on-surface tracking-tight">Notre menu gourmand</h1>
+<!-- Emblematic decorative curved brush underline -->
+<svg class="w-48 h-3 mx-auto mt-1 text-secondary" fill="currentColor" viewbox="0 0 200 12">
+<path d="M2,8 C40,2 140,1 198,7 C145,11 60,11 2,8 Z"></path>
+</svg>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-2">
+        Commandez vos spécialités préparées minute à Ndogbong. À emporter ou en livraison rapide à Douala.
+      </p>
+</section>
+<!-- Sticky Navigation, Search & Quick Filters -->
+<div class="sticky top-20 z-40 bg-surface/95 backdrop-blur-md shadow-sm py-space-sm">
+<div class="max-w-[1200px] mx-auto px-margin flex flex-col gap-3">
+<!-- Search bar & Filter summary -->
+<div class="flex flex-col sm:flex-row items-center gap-3">
+<div class="relative w-full sm:flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-11 pr-4 py-2.5 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm shadow-sm focus:outline-none focus:bg-surface-container-low transition-all" placeholder="Rechercher un plat, un accompagnement, une boisson..." type="text"/>
+</div>
+<div class="flex items-center gap-2 shrink-0 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
+<button class="px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm whitespace-nowrap" type="button">Tout afficher</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm whitespace-nowrap transition-colors" type="button">🔥 Nouveautés</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm whitespace-nowrap transition-colors" type="button">⭐ Populaires</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm whitespace-nowrap transition-colors" type="button">🎁 Formule Spéciale</button>
+</div>
+</div>
+<!-- Category Horizontal Pills -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<a class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-sm whitespace-nowrap transition-transform active:scale-95" href="#poulet">
+<span>🍗</span><span>Poulet (7)</span>
+</a>
+<a class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-md text-label-md whitespace-nowrap transition-colors" href="#accompagnements">
+<span>🍟</span><span>Accompagnements (4)</span>
+</a>
+<a class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-md text-label-md whitespace-nowrap transition-colors" href="#naturelles">
+<span>🥤</span><span>Boissons naturelles (7)</span>
+</a>
+<a class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-md text-label-md whitespace-nowrap transition-colors" href="#gazeuses">
+<span>🫧</span><span>Sodas &amp; Gazeuses (6)</span>
+</a>
+<a class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-md text-label-md whitespace-nowrap transition-colors" href="#alcool">
+<span>🍺</span><span>Bières [18+] (10)</span>
+</a>
+<a class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-md text-label-md whitespace-nowrap transition-colors" href="#alcool">
+<span>🍷</span><span>Vins [18+] (6)</span>
+</a>
+<a class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-md text-label-md whitespace-nowrap transition-colors" href="#alcool">
+<span>🥃</span><span>Whiskies [18+] (6)</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Layout (70% Menu Catalog / 30% Sticky Cart) -->
+<div class="max-w-[1200px] mx-auto px-margin py-space-lg w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (~70% = 8 cols on desktop) -->
+<div class="lg:col-span-8 flex flex-col gap-space-xl">
+<!-- ==================== SECTION A: POULET ==================== -->
+<section class="scroll-mt-40 flex flex-col gap-space-md" id="poulet">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2">
+<div>
+<div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold mb-1">
+                Recette signature de la maison
+              </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Poulet doré, croustillant &amp; braisé</h2>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-medium">Volaille fraîche locale mariné aux épices du Cameroun</p>
+</div>
+<!-- Chicken Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Item 1: Poulet pané 1 pièce -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex gap-3">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A golden, crispy fried chicken tender drumstick served on a rustic dark ceramic plate with Penja pepper herbs, warm studio spotlight, appetizing steam rising, shallow depth of field in amber tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi311ntqWTwVn0t0-XNCt4W1DJo6_UqIV8ijW6KiGS93m4Mwvhv4nb63Szw3uOdtsNQoXxT1vFivCFfu-q2lxKicUDN2O_gN-fV1sJVApSWcQ-QmrYAkxDydNBWZ7NPmVo3TFhVGoEnr5mEzttMXcvzdqQovJlSLMVqu0e3izaUWiCwdyJbt0uq7MSWtAZVgQ0nj9edR_TQIky4WW8PQoGGMyBFULza65fC4-rjUyt"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Poulet pané (1 pièce)</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Morceau tendre mariné aux épices du terroir, chapelure dorée extra-croustillante.</p>
+<span class="font-price-tag text-price-tag text-secondary font-bold mt-2">1 500 FCFA</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<div class="flex items-center gap-2 bg-surface-container-low px-2 py-1 rounded-full">
+<button aria-label="Diminuer" class="w-6 h-6 flex items-center justify-center rounded-full bg-surface text-on-surface font-bold text-xs hover:bg-surface-container-high transition-colors" type="button">-</button>
+<span class="font-label-sm text-label-sm font-semibold px-1">1</span>
+<button aria-label="Augmenter" class="w-6 h-6 flex items-center justify-center rounded-full bg-surface text-on-surface font-bold text-xs hover:bg-surface-container-high transition-colors" type="button">+</button>
+</div>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+<!-- Item 2: ¼ Poulet pané -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex gap-3">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A quarter crispy fried chicken golden brown crust seasoned with local Cameroonian spices on greaseproof paper with house chili dip sauce nearby, vibrant restaurant lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdLisQZxzyxrCqiixNYxrfFg8Z5q76hTZUFVLU2hhrpAMGtvTrVPl1P_ZTNoFZo5YqIuF1DvFXDKut9OCmj_bYzr233TxbwthV3S1JLnECbMoWlHaHTZ811x7YxDz4teXtBFUOHWHaIkT4Gqffdfcvw6at6PZmuCAHipR1v-IbG5y9Xm8hEpsKbsR31G4Dt_zIzvcGUo0zJCaobEFe-iGXAAHOi8Ipa5CZLFiMZjLj"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">¼ Poulet pané</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Cuisse ou blanc pané croustillant, servi avec sauce piquante maison.</p>
+<span class="font-price-tag text-price-tag text-secondary font-bold mt-2">3 000 FCFA</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-end">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+<!-- Item 3: ½ Poulet pané (ACTIVE IN CART STATE) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-md transition-all flex flex-col justify-between relative overflow-hidden bg-gradient-to-br from-surface-container-lowest to-surface-container-low">
+<div class="absolute top-2 right-2 px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Ajouté x1</span>
+</div>
+<div class="flex gap-3 pt-2">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Generous half crispy golden fried chicken served with fresh garnishes in a Douala dining setting, mouthwatering golden crust, natural appetizing lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMHCxArozjj_0sZ29FTeO4smAaWBrs9Aow-8bUbBfs7z_vzg5Z1dYA0SLeOe1C9vwlIERTwtyT7somnfg2hoO3W4ZKW_M4EdvGmRv7VMWYxKZ49JzvRTOB7nNXDlZP07Ehy3JZz_e9ZKL7yUB19W5mtqt3hNpDPBiVzgvlA7C_HhD1QRAqhjCiLEkLAGytFUQXYOwyI13Y9Koqmamju93ZUzsvik1m_pCoWuS1l1Qh"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">½ Poulet pané</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Deux beaux morceaux généreux dorés minute croustillants.</p>
+<span class="font-price-tag text-price-tag text-secondary font-bold mt-2">5 500 FCFA</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dans votre commande</span>
+<div class="flex items-center gap-2 bg-surface-container-high px-2.5 py-1 rounded-full">
+<button aria-label="Diminuer" class="w-6 h-6 flex items-center justify-center rounded-full bg-surface-container-lowest text-on-surface font-bold text-xs hover:bg-surface-container-low transition-colors" type="button">-</button>
+<span class="font-label-md text-label-md font-bold px-1 text-primary">1</span>
+<button aria-label="Augmenter" class="w-6 h-6 flex items-center justify-center rounded-full bg-surface-container-lowest text-on-surface font-bold text-xs hover:bg-surface-container-low transition-colors" type="button">+</button>
+</div>
+</div>
+</div>
+<!-- Item 4: Poulet pané entier -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex gap-3">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Whole crispy fried chicken cut in generous portions arranged on a wooden presentation board, golden fried crumb, African spices and sliced red onions garnish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA_aV5Cpm4MIh7IFtxN4e2-Eod04oDdfIys06NSzUtOykfP0ItEqjp6GDfnAHoPcOWsFEdEOh6_fsP833lh-zwt1IIHmmICyastR0L5nNh709i8x5T9FC4lWfxZt_jNVSoY8bC7-TNSV9ANI-uffptFK9rpI8qaDm6Z3z7jK3PQFQsYBk1RVlJMBy8SuDqlLufa2wVcSPxmrfSqaWjwnBq45GCsrU-s3S8pRJowDxB"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Poulet pané entier</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Le festin familial croustillant, découpé en 8 morceaux.</p>
+<span class="font-price-tag text-price-tag text-secondary font-bold mt-2">10 000 FCFA</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-end">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+<!-- Item 5: ¼ Poulet frit -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex gap-3">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Quarter traditional African seasoned fried chicken with Penja black pepper and aromatic garlic glaze, glistening golden skin on a warm ceramic dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiilHMuA8XCqLcPNjpT_tSOCRS1fUkWmBWn6CWx3C9Wf3SqZKi76yVEXnSfQsnWdx3K_NrOom_1GDv6SA2HSoA3d4fURcx11g1YxR29vj-0oV_G5Mrg2MwYzwQ3csVDrAyywTSfWt0hXDSFdqnXmyaTQO8iqHg4IzpPVYywSr4-i5tiKxiKvzEuIkLvZjuLaNhfQYLH4SwUCaV6nC1NPofytvqr4fRxZtIr0fTHR7S"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">¼ Poulet frit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Frit à l'ancienne, peau dorée assaisonnée au poivre de Penja.</p>
+<span class="font-price-tag text-price-tag text-secondary font-bold mt-2">2 500 FCFA</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-end">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+<!-- Item 6: ½ Poulet frit -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex gap-3">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Half juicy traditional fried chicken, fragrant herbs and peppers seasoning, savory steam rising, warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvq6a4jANVrocVMF-ik7uHmYt5oFsAS1DT4TBWRIK4uu452wlEIooIs0TuVpfo5iDz4wUr5rS1H2-QJLI_VH8AX3h2yRX9zJTr1dXMYrLGehtx4bRGsM6VTPwdlY-MqqBU0h7BjMxq4qJu7AcByF7A-y7MLZW_NFdv5rzDCmccbJ4_C6thAB1R6zCR6KQknkyqFFnbMMQDmZ26ooOOdAoNvlAsCA9cav9fTV3t6Mvl"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">½ Poulet frit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Tendre et juteux à cœur, mariné 24h avec nos condiments secrets.</p>
+<span class="font-price-tag text-price-tag text-secondary font-bold mt-2">5 000 FCFA</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-end">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+<!-- Item 7: Poulet braisé entier (Featured wide card) -->
+<div class="sm:col-span-2 bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row items-center gap-4">
+<div class="w-full sm:w-44 h-36 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Whole authentic Cameroonian braised chicken grilled over hot wood embers, coated with green aromatic marinade, spicy red pepper sauce on side, fresh parsley sprig in Douala night street food style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATVolxVchX84CYI00JLF2rUoJusfH_vXvhvD4_v8tn5Zp_RuqS-1JGD-CHtzUzKZeVATq_69jki1EtDwouxZ-y8xm6U5mJGqFH3E6vV33Bmf_ny46QfMXLNXpGI3YkQBXCrtKmJh5eQq3nUVzPELDOEapuVZxACP2aD1DIyb88XyY5jqZkQU8jCUO9eW-XAMrYitKJRrj10_NUebUbmLb5r0sT22HA3FisKZxBjYFi"/>
+</div>
+<div class="flex flex-col flex-1 w-full justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface">Poulet braisé entier</h3>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Aux braises de bois</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Braisé lentement aux braises vives de bois, arrosé d'une marinade vert-épicée aux herbes locales et piment fort maison de Ndogbong.</p>
+</div>
+<div class="flex items-center justify-between mt-4 pt-2">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">10 000 FCFA</span>
+<button class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-sm hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>Ajouter à la commande</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION B: ACCOMPAGNEMENTS ==================== -->
+<section class="scroll-mt-40 flex flex-col gap-space-md" id="accompagnements">
+<div class="flex items-center justify-between pb-2">
+<div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Garnitures du terroir</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Accompagnements chauds</h2>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-bold">Dès 500 FCFA</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Accompagnement 1: Alloco (IN CART STATE) -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex items-center justify-between gap-3 relative overflow-hidden">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Golden fried ripe plantain slices alloco on a small clay plate, caramelized sweetness, warm African dining light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlHyQqX2PMH54CixJQrfngQcPv_Ko2ShThNVaSam5bWbRscYhdcFZVfg9UATOIw8LzYylOM_1wE5_7nPy8FVGppGPjj-dXVlI9G2j_-alciycxpdlUoLgsd8C4ZwpSW63pGvm7V4ZFAmcvYMkPTLjaXCzSQPRnpZeCQnuFxawWH2vaM2V9B0AmWkZ-fJi5dFYyel_J9RIuiW8oGpn3llic6q94uTXpe9v9HYwZqrAy"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Alloco / Plantains mûrs</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Plantains caramélisés dorés minute</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-price-tag text-price-tag text-secondary font-bold">500 FCFA</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-on-surface font-label-sm text-label-sm font-bold">x2 au panier</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high px-2 py-1 rounded-full shrink-0">
+<button aria-label="Diminuer" class="w-6 h-6 flex items-center justify-center rounded-full bg-surface text-on-surface font-bold text-xs" type="button">-</button>
+<span class="font-label-sm text-label-sm font-bold px-1 text-primary">2</span>
+<button aria-label="Augmenter" class="w-6 h-6 flex items-center justify-center rounded-full bg-surface text-on-surface font-bold text-xs" type="button">+</button>
+</div>
+</div>
+<!-- Accompagnement 2: Frites -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex items-center justify-between gap-3">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Crispy freshly cut golden potato french fries served in a small basket, sprinkled with fine salt and herbs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdRpbrD-H1MP1dC3bRwJHyqvWyGULoEcsgBWi0PC3sn-54k2Etg6-7S_f5-JYOKVvEA8Z6hrqQGcMASA-LCJB3tpj_2qLFZo2uU0FZYEZmm4swA11RRdp88mg_AGYjukbatzyiNuHKV1-s-Zn2CjdC_2owKr8txdZDcwoqa9JZBdT9mgI2gPvUPjzZyjBEQQ0ilnHDpPMJwZ-LfGnstIJlMG7Q_t4NR8gvPGQ6Ke2c"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Frites de pommes de terre</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Pommes fraîches coupées main</p>
+<span class="font-price-tag text-price-tag text-secondary font-bold mt-1 inline-block">500 FCFA</span>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface hover:bg-primary-container hover:text-on-primary-container transition-colors flex items-center justify-center shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<!-- Accompagnement 3: Miondo -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex items-center justify-between gap-3">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Traditional Cameroonian miondo cassava sticks cooked wrapped in leaves, soft texture, steamed fresh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAalXZ_y5gQYPCNUS4FC2Jk4f4TQer5A2X61a-fPT4aCOxyHGnpwbMJ9mHDFKcRGKymD2VjlXRf-qQab5Xi1GhOOR7Rx7hJOGzAQCh52aaud-R5JXTzLa1ZR3b8r3mNHst189BSxTcwTv7mztaHTGNKse-oUl6JdCJDxOFjmP8GtiTrsTVVgMhVYuA5rwHUcbJwPKXOOOrIdZ1GfC7Kxwazhd0zMc97e0aPZBUmxVHm"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Miondo traditionnels</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Bâtons de manioc fermenté vapeur</p>
+<span class="font-price-tag text-price-tag text-secondary font-bold mt-1 inline-block">500 FCFA</span>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface hover:bg-primary-container hover:text-on-primary-container transition-colors flex items-center justify-center shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<!-- Accompagnement 4: Riz parfumé -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex items-center justify-between gap-3">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Steaming fragrant white jasmine rice served with gentle green herbs in a bowl, savory accompaniment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAudXKe8YCSjDd6d8YLHBPs0eK328VYO7Y9Fa09grN45CqPB7KsMVbgHJE51mbgXbENpJYd8_Vn-0CH3jF7VePbOXNmEfDov3G8QU7BXwbEQ4Hg43TSO2thBUhQym5buTbPE8Arn_1w3qNg_wweQoXSQDLU1thUgNmJc8cPV7if0ZoVORGEeKrNCs_7V9hXFriGbXMcyR2D0d6PBpOkifC9acN965x9wUgLqgUNrEod"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Riz parfumé au jasmin</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Riz blanc étuvé aux herbes douces</p>
+<span class="font-price-tag text-price-tag text-secondary font-bold mt-1 inline-block">500 FCFA</span>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface hover:bg-primary-container hover:text-on-primary-container transition-colors flex items-center justify-center shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION C: BOISSONS NATURELLES ==================== -->
+<section class="scroll-mt-40 flex flex-col gap-space-md" id="naturelles">
+<div class="pb-2">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Fraîcheur &amp; Vitalité</span>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Boissons naturelles faites maison</h2>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant">100% fruits locaux sans conservateur</span>
+</div>
+</div>
+<!-- Dotted Leader Traditional Brass Style Menu List -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm space-y-4">
+<!-- Row 1: Eau minérale -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 bg-surface-container-low/30 p-2.5 rounded-lg">
+<div class="flex items-center gap-2 flex-1 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">water_drop</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Eau minérale Supermont / Tangui (1,5 L)</span>
+<span class="hidden sm:inline-block flex-1 border-b border-dotted border-outline-variant mx-2"></span>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 shrink-0">
+<span class="font-price-tag text-price-tag text-secondary font-bold">800 FCFA</span>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface hover:bg-primary-container hover:text-on-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Ajouter
+                </button>
+</div>
+</div>
+<!-- Row 2: Bissap -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3">
+<div class="flex items-center gap-2 flex-1 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">local_drink</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Jus d'oseille (Bissap mentholé)</span>
+<span class="hidden sm:inline-block flex-1 border-b border-dotted border-outline-variant mx-2"></span>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 shrink-0">
+<div class="flex items-center gap-1 bg-surface-container p-0.5 rounded-full">
+<button class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-medium shadow-sm" type="button">Petit 33cl · 500</button>
+<button class="px-2.5 py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface" type="button">Grand 1L · 1 000</button>
+</div>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface hover:bg-primary-container hover:text-on-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Ajouter
+                </button>
+</div>
+</div>
+<!-- Row 3: Ananas-Gingembre -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3">
+<div class="flex items-center gap-2 flex-1 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">eco</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Jus d'ananas-gingembre pressé</span>
+<span class="hidden sm:inline-block flex-1 border-b border-dotted border-outline-variant mx-2"></span>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 shrink-0">
+<div class="flex items-center gap-1 bg-surface-container p-0.5 rounded-full">
+<button class="px-2.5 py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface" type="button">Petit · 1 000</button>
+<button class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-medium shadow-sm" type="button">Grand 1L · 2 000</button>
+</div>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface hover:bg-primary-container hover:text-on-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Ajouter
+                </button>
+</div>
+</div>
+<!-- Row 4: Baobab (Bouye) - IN CART STATE -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2 flex-1 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">verified</span>
+<div>
+<span class="font-body-md text-body-md font-bold text-on-surface">Jus de baobab velouté (Bouye)</span>
+<span class="ml-2 px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold">Au panier (x2 Grand)</span>
+</div>
+<span class="hidden sm:inline-block flex-1 border-b border-dotted border-outline-variant mx-2"></span>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 shrink-0">
+<span class="font-price-tag text-price-tag text-secondary font-bold">2 000 FCFA</span>
+<div class="flex items-center gap-1 bg-surface px-2 py-1 rounded-full shadow-sm">
+<button aria-label="Diminuer" class="w-5 h-5 flex items-center justify-center rounded-full bg-surface-container font-bold text-xs" type="button">-</button>
+<span class="font-label-sm text-label-sm font-bold px-1 text-primary">2</span>
+<button aria-label="Augmenter" class="w-5 h-5 flex items-center justify-center rounded-full bg-surface-container font-bold text-xs" type="button">+</button>
+</div>
+</div>
+</div>
+<!-- Row 5: Menthe au lait -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3">
+<div class="flex items-center gap-2 flex-1 min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0">bubble_chart</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Menthe au lait onctueuse</span>
+<span class="hidden sm:inline-block flex-1 border-b border-dotted border-outline-variant mx-2"></span>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 shrink-0">
+<div class="flex items-center gap-1 bg-surface-container p-0.5 rounded-full">
+<button class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-medium shadow-sm" type="button">Petit · 1 000</button>
+<button class="px-2.5 py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface" type="button">Grand · 2 000</button>
+</div>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface hover:bg-primary-container hover:text-on-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Ajouter
+                </button>
+</div>
+</div>
+<!-- Row 6: Chocolat au lait -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3">
+<div class="flex items-center gap-2 flex-1 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">bakery_dining</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Chocolat au lait parfumé</span>
+<span class="hidden sm:inline-block flex-1 border-b border-dotted border-outline-variant mx-2"></span>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 shrink-0">
+<div class="flex items-center gap-1 bg-surface-container p-0.5 rounded-full">
+<button class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-medium shadow-sm" type="button">Petit · 1 500</button>
+<button class="px-2.5 py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface" type="button">Grand 1L · 4 500</button>
+</div>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface hover:bg-primary-container hover:text-on-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Ajouter
+                </button>
+</div>
+</div>
+<!-- Row 7: Cocktail vitalisant -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2 flex-1 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">favorite</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Cocktail revitalisant betterave &amp; agrumes</span>
+<span class="hidden sm:inline-block flex-1 border-b border-dotted border-outline-variant mx-2"></span>
+</div>
+<div class="flex items-center justify-between sm:justify-end gap-3 shrink-0">
+<div class="flex items-center gap-1 bg-surface-container p-0.5 rounded-full">
+<button class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-medium shadow-sm" type="button">Petit · 1 500</button>
+<button class="px-2.5 py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface" type="button">Grand · 3 000</button>
+</div>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface hover:bg-primary-container hover:text-on-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Ajouter
+                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION D: BOISSONS GAZEUSES ==================== -->
+<section class="scroll-mt-40 flex flex-col gap-space-md" id="gazeuses">
+<div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Rafraîchissements</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Boissons gazeuses &amp; Sodas</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Bouteille 33cl</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Grenadine, Ananas, Pamplemousse</h4>
+</div>
+<div class="flex items-center justify-between mt-4 pt-2">
+<span class="font-price-tag text-price-tag text-secondary font-bold">800 FCFA</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Spécialités maltées</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Malta Vanille, Spécial Pamplemousse</h4>
+</div>
+<div class="flex items-center justify-between mt-4 pt-2">
+<span class="font-price-tag text-price-tag text-secondary font-bold">1 000 FCFA</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Classiques frais</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Djino, Coca-Cola, Vimto, Orangina</h4>
+</div>
+<div class="flex items-center justify-between mt-4 pt-2">
+<span class="font-price-tag text-price-tag text-secondary font-bold">1 000 FCFA</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION E: ALCOOL & SPIRITUEUX ==================== -->
+<section class="scroll-mt-40 flex flex-col gap-space-md" id="alcool">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Cave &amp; Bar</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Bières, Vins fins &amp; Whiskies</h2>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">no_adult_content</span>
+<span>18+ Réservé aux majeurs</span>
+</span>
+</div>
+<!-- Alcohol Cards Split in 3 Categories -->
+<div class="space-y-4">
+<!-- Bières -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-xl">🍺</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Bières fraîches du Cameroun &amp; Importées</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">33 Export, Castel Beer, Booster Cidre, Origin, Kadji Beer</span>
+<div class="flex items-center justify-between mt-3">
+<span class="font-price-tag text-price-tag text-secondary font-bold">1 000 FCFA</span>
+<button class="px-2.5 py-1 rounded-full bg-surface text-on-surface hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">+ Ajouter</button>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Mutzig, Beaufort Light/Lager, Petite Guinness, Chill, Ice</span>
+<div class="flex items-center justify-between mt-3">
+<span class="font-price-tag text-price-tag text-secondary font-bold">1 000 FCFA</span>
+<button class="px-2.5 py-1 rounded-full bg-surface text-on-surface hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">+ Ajouter</button>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Isenbeck, 1664, Heineken, Grande Guinness</span>
+<div class="flex items-center justify-between mt-3">
+<span class="font-price-tag text-price-tag text-secondary font-bold">1 500 FCFA</span>
+<button class="px-2.5 py-1 rounded-full bg-surface text-on-surface hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">+ Ajouter</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Vins Fins -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-xl">🍷</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Vins de Sélection (Bouteille)</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">L. Eschnauer Blanc, Chardonnay Blanc</span>
+<div class="flex items-center justify-between mt-3">
+<span class="font-price-tag text-price-tag text-secondary font-bold">8 000 FCFA</span>
+<button class="px-2.5 py-1 rounded-full bg-surface text-on-surface hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">+ Ajouter</button>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">L. Eschnauer Rouge (Millésime sélectionné)</span>
+<div class="flex items-center justify-between mt-3">
+<span class="font-price-tag text-price-tag text-secondary font-bold">10 000 FCFA</span>
+<button class="px-2.5 py-1 rounded-full bg-surface text-on-surface hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">+ Ajouter</button>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Cabernet Sauvignon, Château Rousseaux, Merlot, Moscato</span>
+<div class="flex items-center justify-between mt-3">
+<span class="font-price-tag text-price-tag text-secondary font-bold">12 000 FCFA</span>
+<button class="px-2.5 py-1 rounded-full bg-surface text-on-surface hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">+ Ajouter</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Whiskies & Spiritueux -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-xl">🥃</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Whiskies &amp; Spiritueux Prestigieux (Bouteille)</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Black &amp; White</span>
+<div class="flex items-center justify-between mt-3">
+<span class="font-price-tag text-price-tag text-secondary font-bold">10 000 FCFA</span>
+<button class="px-2 py-1 rounded-full bg-surface text-on-surface hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">+</button>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">J&amp;B Rare, Red Label, Baileys</span>
+<div class="flex items-center justify-between mt-3">
+<span class="font-price-tag text-price-tag text-secondary font-bold">15 000 FCFA</span>
+<button class="px-2 py-1 rounded-full bg-surface text-on-surface hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">+</button>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Ballantine's Finest</span>
+<div class="flex items-center justify-between mt-3">
+<span class="font-price-tag text-price-tag text-secondary font-bold">20 000 FCFA</span>
+<button class="px-2 py-1 rounded-full bg-surface text-on-surface hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">+</button>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Jack Daniel's Old No.7</span>
+<div class="flex items-center justify-between mt-3">
+<span class="font-price-tag text-price-tag text-secondary font-bold">25 000 FCFA</span>
+<button class="px-2 py-1 rounded-full bg-surface text-on-surface hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors" type="button">+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Legal Warning Alcohol -->
+<div class="bg-surface-container-high/60 rounded-xl p-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px] shrink-0">warning</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong>Avertissement légal :</strong> L'abus d'alcool est dangereux pour la santé. Vente strictement interdite aux moins de 18 ans. À consommer avec modération.
+            </p>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN (~30% = 4 cols on desktop): STICKY MINI-CART -->
+<aside class="lg:col-span-4 sticky top-28">
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-lg flex flex-col gap-4">
+<!-- Cart Header -->
+<div class="flex items-center justify-between pb-3 bg-surface-container-low -mx-5 -mt-5 p-5 rounded-t-2xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">shopping_bag</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Mon Panier</h2>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold">
+              3 articles
+            </span>
+</div>
+<!-- Order Mode Toggle (Livraison vs À emporter) -->
+<div class="grid grid-cols-2 p-1 rounded-full bg-surface-container-low gap-1">
+<button class="flex items-center justify-center gap-1.5 py-2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">moped</span>
+<span>Livraison</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-2 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-semibold transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">storefront</span>
+<span>À emporter</span>
+</button>
+</div>
+<!-- Cart Item List -->
+<div class="flex flex-col divide-y divide-surface-container-high/40 max-h-[360px] overflow-y-auto pr-1">
+<!-- Cart Item 1 -->
+<div class="py-3 flex items-center justify-between gap-3">
+<div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Appetizing half fried chicken in cardboard delivery container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3RKH4jmiEeEnCSKX_VEFxzN4K3sIH_DDI443vJRjP58NV7KrFgCz_vQKmEN7BJw6WKJs66kmehyXjp__BhsEZkDn0Hb30bIsRb8ZJdB9nhUl31XXjIx-wFEdYp6E5dL35paeUhAYgVLa6VIlDGFVI65aKXV2zla9bXCblpCv3gUahvmfdX8fwdJISODCQFW8nieiV40xEUUCJp1ZLTjL6a_7TSE_xVXkcuJojganp"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-body-md text-body-md font-bold text-on-surface truncate">½ Poulet pané</h4>
+<span class="font-label-sm text-label-sm text-secondary font-bold">5 500 FCFA</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded-full shrink-0">
+<button aria-label="Supprimer ou diminuer" class="w-5 h-5 flex items-center justify-center rounded-full bg-surface font-bold text-xs" type="button">-</button>
+<span class="font-label-sm text-label-sm font-bold px-1">1</span>
+<button aria-label="Augmenter" class="w-5 h-5 flex items-center justify-center rounded-full bg-surface font-bold text-xs" type="button">+</button>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="py-3 flex items-center justify-between gap-3">
+<div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Golden fried ripe plantain alloco portion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDToJTiRUypeEL26FwhWJRdzCWc78j8NoH3OSip-7Nu-STJsIY3u8biv0TtjkO12CDTV0p5PuqikHbfG_CflLpE2hnVsuUjkzgboSe36kqN-BXM0f4apUfavITOOPSnEwL1JOwUFA9thxpZWtvdLP5s_0R_kk03z9ZDt2Z4cf6ecVWLjkAUas6KKcWBFX4nNBJWg9H1yer57c4AJZluWab_jI68zfgHA8A2THBI0mjW"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-body-md text-body-md font-bold text-on-surface truncate">Alloco plantains mûrs</h4>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">500 x 2 =</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">1 000 FCFA</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded-full shrink-0">
+<button aria-label="Diminuer" class="w-5 h-5 flex items-center justify-center rounded-full bg-surface font-bold text-xs" type="button">-</button>
+<span class="font-label-sm text-label-sm font-bold px-1">2</span>
+<button aria-label="Augmenter" class="w-5 h-5 flex items-center justify-center rounded-full bg-surface font-bold text-xs" type="button">+</button>
+</div>
+</div>
+<!-- Cart Item 3 -->
+<div class="py-3 flex items-center justify-between gap-3">
+<div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Bottle of natural baobab fruit juice chilled" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnqXAzTiCTZPaOpf0HhEuPVo5bep7HufdoIPB3s6gghKCK0wyhVobk9_S9I9E0jICwTnyjwOKyhRcn0cJXvbBig-IeQLPiTjJVMtcKOYyHFYcwkNrKDuM3hn9-UFUOeSh6drtXMUw9aOBJqpJCqeVkvZUL38H6eftNPDk6amcR1qSYGtpaXBu-tERxZXFu9D0DX_WzIEZqEaYuKjvFelwLfLN62D445v-PCtOb146i"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-body-md text-body-md font-bold text-on-surface truncate">Jus de baobab (1 L)</h4>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 000 x 2 =</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">2 000 FCFA</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded-full shrink-0">
+<button aria-label="Diminuer" class="w-5 h-5 flex items-center justify-center rounded-full bg-surface font-bold text-xs" type="button">-</button>
+<span class="font-label-sm text-label-sm font-bold px-1">2</span>
+<button aria-label="Augmenter" class="w-5 h-5 flex items-center justify-center rounded-full bg-surface font-bold text-xs" type="button">+</button>
+</div>
+</div>
+</div>
+<!-- Price Calculation Breakdown -->
+<div class="bg-surface-container-low p-4 rounded-xl space-y-2">
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Sous-total</span>
+<span class="font-semibold text-on-surface">8 500 FCFA</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span>Livraison (Ndogbong &amp; environs)</span>
+<span class="material-symbols-outlined text-[14px] text-primary" title="Zone Douala V">info</span>
+</span>
+<span class="font-semibold text-on-surface">1 000 FCFA</span>
+</div>
+<div class="pt-2 flex justify-between items-baseline">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Total net</span>
+<span class="font-headline-lg text-headline-lg text-secondary font-bold tracking-tight">9 500 FCFA</span>
+</div>
+</div>
+<!-- Preparation & Delivery ETA Note -->
+<div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">timelapse</span>
+<span class="font-label-sm text-label-sm font-medium">Préparé minute en 25–35 min · Ndogbong, Douala</span>
+</div>
+<!-- Call To Action Buttons -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full py-3.5 px-6 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-md hover:bg-primary hover:text-on-primary active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="button">
+<span>Commander en ligne (9 500 FCFA)</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<a class="w-full py-3 px-6 rounded-full bg-surface-container-lowest text-secondary font-label-md text-label-md font-bold hover:bg-secondary hover:text-on-secondary active:scale-[0.98] transition-all flex items-center justify-center gap-2 shadow-sm" href="https://wa.me/237678184930?text=Bonjour%20La%20Plazza,%20je%20souhaite%20commander:%201x%20Demi%20poulet%20pan%C3%A9,%202x%20Alloco,%202x%20Jus%20de%20baobab%201L.%20Total:%209500%20FCFA" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Commander via WhatsApp</span>
+</a>
+</div>
+<!-- Reassurance Badges: Payment & Delivery -->
+<div class="pt-2 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant font-medium">Paiement sécurisé à la livraison</p>
+<div class="flex items-center justify-center gap-2 mt-2">
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm font-bold text-on-surface">Espèces</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm font-bold text-primary">MTN MoMo</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm font-bold text-secondary">Orange Money</span>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div></main><aside aria-label="Assistance rapide" class="fixed bottom-6 right-6 z-40"><a class="flex items-center gap-2 px-4 py-3 rounded-full bg-surface-container-lowest text-on-surface shadow-[0_10px_28px_rgba(31,20,16,0.16)] hover:bg-surface-container-low transition-all active:scale-[0.98]" href="https://wa.me/237678184930" rel="noopener noreferrer" target="_blank"><span class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">chat</span></span><span class="font-label-md text-label-md font-bold tracking-tight text-on-surface">WhatsApp</span></a></aside><footer class="w-full bg-secondary text-on-secondary py-space-xl"><div class="max-w-[1200px] mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="capture_logo.PNG" class="h-8 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AEtjO1WdrjdyeHm3u4WdG-Nkg3SRgEhRUM2D1s92zBUfUHhenF-1zk49KYbkbeiE2nKRu478BFWliN1VAyKI4j23UYodQUBgjcYEtpq9KuoRV_WmpA23BpiNdqZMQP5J4VQsDJbnjKUbUq6ngCnFACZ5DymcPby9kGIM8BzdzuKCKA780wUEKrb3ElZnNZok3PxQT5eYU9U7sznjhBjoSyk2CWo-o13ioD8-_e45HfW27FATSWIyPBCxXky2BZY"/><span class="font-headline-sm text-headline-sm text-on-secondary">La Plazza</span></div><p class="font-script-accent text-script-accent text-secondary-fixed">Choisissez le meilleur goût</p><p class="font-body-sm text-body-sm text-on-secondary/80 flex items-start gap-1.5 pt-space-xs"><span class="material-symbols-outlined text-[18px] shrink-0 text-secondary-fixed">location_on</span><span>Fin goudron, Ndogbong, Douala, Cameroun</span></p></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed font-bold">Horaires d'ouverture</span><ul class="font-body-sm text-body-sm space-y-1.5 text-on-secondary/80"><li class="flex justify-between"><span class="font-medium">Mar – Ven:</span><span>10h00 – 22h00</span></li><li class="flex justify-between"><span class="font-medium">Samedi:</span><span>10h00 – 23h00</span></li><li class="flex justify-between"><span class="font-medium">Dimanche:</span><span>12h00 – 23h00</span></li><li class="flex justify-between text-secondary-fixed"><span class="font-medium">Lundi:</span><span>Fermé</span></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed font-bold">Contact &amp; Commandes</span><div class="font-body-sm text-body-sm space-y-2 text-on-secondary/80"><a class="flex items-center gap-2 hover:text-secondary-fixed transition-colors" href="tel:+237678184930"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">phone_iphone</span><span>+237 678 18 49 30</span></a><a class="flex items-center gap-2 hover:text-secondary-fixed transition-colors" href="tel:+237656927470"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">call</span><span>+237 656 92 74 70</span></a><a class="flex items-center gap-2 hover:text-secondary-fixed transition-colors" href="https://wa.me/237678184930" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">forum</span><span>WhatsApp Direct</span></a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed font-bold">Paiements Acceptés</span><div class="flex flex-wrap gap-2 pt-1"><span class="px-2.5 py-1 rounded-full bg-on-secondary/10 font-label-sm text-label-sm text-on-secondary font-medium">Espèces</span><span class="px-2.5 py-1 rounded-full bg-on-secondary/10 font-label-sm text-label-sm text-on-secondary font-medium">MTN MoMo</span><span class="px-2.5 py-1 rounded-full bg-on-secondary/10 font-label-sm text-label-sm text-on-secondary font-medium">Orange Money</span></div><p class="font-body-sm text-body-sm text-on-secondary/70 text-xs pt-space-sm leading-relaxed">L'abus d'alcool est dangereux pour la santé. À consommer avec modération. Vente interdite aux mineurs.</p></div></div><div class="pt-space-md mt-space-md border-t border-on-secondary/15 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-secondary/75 font-body-sm text-body-sm"><p>© 2025 La Plazza. Tous droits réservés.</p><div class="flex items-center gap-space-lg"><a class="hover:text-secondary-fixed transition-colors" data-path="contact" href="#">Mentions légales</a><a class="hover:text-secondary-fixed transition-colors" data-path="contact" href="#">Politique de confidentialité</a></div></div></div></footer></body></html>

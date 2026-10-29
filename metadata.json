@@ -1,0 +1,8 @@
+{
+  "name": "La Plazza - Restaurant & Grillades Douala",
+  "description": "Restaurant convivial à Ndogbong Douala : Poulet pané croustillant, frit et braisé, accompagnements du terroir, boissons naturelles et réservation de tables.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

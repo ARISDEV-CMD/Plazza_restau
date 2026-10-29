@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#59431d", "error": "#ba1a1a", "background": "#fff8f6", "inverse-on-surface": "#ffede7", "tertiary-container": "#bea071", "on-error": "#ffffff", "surface-variant": "#f4ded7", "surface-dim": "#ebd5ce", "tertiary-fixed": "#ffdeac", "on-primary-fixed": "#2c1700", "primary-fixed-dim": "#ffb86a", "surface-bright": "#fff8f6", "on-secondary-fixed": "#410004", "on-error-container": "#93000a", "on-tertiary-fixed": "#281900", "inverse-primary": "#ffb86a", "secondary-fixed": "#ffdad7", "on-surface-variant": "#534435", "secondary": "#b52529", "surface": "#fff8f6", "on-secondary": "#ffffff", "on-primary-container": "#573200", "surface-container": "#ffe9e2", "error-container": "#ffdad6", "surface-container-highest": "#f4ded7", "on-secondary-fixed-variant": "#920315", "primary-container": "#e8911a", "surface-container-high": "#fae3dc", "surface-container-lowest": "#ffffff", "tertiary-fixed-dim": "#e2c290", "primary": "#895200", "on-primary": "#ffffff", "tertiary": "#735a32", "on-tertiary": "#ffffff", "on-tertiary-container": "#4c3712", "secondary-container": "#fe5b58", "secondary-fixed-dim": "#ffb3ae", "on-surface": "#241915", "on-background": "#241915", "inverse-surface": "#3b2d29", "outline": "#867463", "on-secondary-container": "#600009", "surface-container-low": "#fff1ec", "outline-variant": "#d9c3af", "on-primary-fixed-variant": "#683d00", "surface-tint": "#895200", "primary-fixed": "#ffdcbc" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.25rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "space-md": "1rem", "margin": "1.5rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-lg-mobile": [ "Epilogue" ], "label-md": [ "Epilogue" ], "label-sm": [ "Inter" ], "headline-lg": [ "Epilogue" ], "display-mobile": [ "Epilogue" ], "body-sm": [ "Inter" ], "body-lg": [ "Inter" ], "body-md": [ "Inter" ], "price-tag": [ "Epilogue" ], "headline-sm": [ "Epilogue" ], "script-accent": [ "Epilogue" ], "headline-md": [ "Epilogue" ], "display": [ "Epilogue" ] }, "fontSize": { "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "0", "fontWeight": "700" } ], "label-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "price-tag": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "600" } ], "script-accent": [ "22px", { "lineHeight": "30px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "0", "fontWeight": "600" } ], "display": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_4px_16px_rgba(31,20,16,0.06)]"><div class="h-20 max-w-[1200px] mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="capture_logo.PNG" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WdrjdyeHm3u4WdG-Nkg3SRgEhRUM2D1s92zBUfUHhenF-1zk49KYbkbeiE2nKRu478BFWliN1VAyKI4j23UYodQUBgjcYEtpq9KuoRV_WmpA23BpiNdqZMQP5J4VQsDJbnjKUbUq6ngCnFACZ5DymcPby9kGIM8BzdzuKCKA780wUEKrb3ElZnNZok3PxQT5eYU9U7sznjhBjoSyk2CWo-o13ioD8-_e45HfW27FATSWIyPBCxXky2BZY"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">La Plazza</span><span class="font-label-sm text-label-sm text-on-surface-variant">Ndogbong · Douala</span></div><div class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Ouvert · jusqu'à 22 h</span></div></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="accueil" href="#">Accueil</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu" href="#">Menu</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="reserver" href="#">Réserver</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="galerie" href="#">Galerie</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md shrink-0"><a class="hidden xl:flex items-center gap-1.5 text-on-surface font-label-md text-label-md hover:text-primary transition-colors" href="tel:+237678184930"><span class="material-symbols-outlined text-[18px] text-primary">call</span><span>+237 678 18 49 30</span></a><button aria-label="Panier" class="relative p-2 rounded-full text-on-surface hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute top-1 right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm leading-none font-bold">0</span></button><a class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-[0_2px_8px_rgba(232,145,26,0.25)] hover:bg-primary hover:text-on-primary active:scale-[0.98] transition-all" data-path="menu" href="#">Commander</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow -->
+<div class="relative w-full max-w-[1200px] mx-auto px-margin pt-space-md pb-space-xl">
+<!-- Top Breadcrumb & Status Pill -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors group" data-path="accueil" href="#">
+<span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span>Retour à l'accueil</span>
+</a>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Réservation instantanée &amp; sans frais d'avance</span>
+</div>
+</div>
+<!-- Editorial Header Block -->
+<div class="mb-space-xl max-w-3xl">
+<div class="inline-block mb-1">
+<span class="font-script-accent text-script-accent text-secondary tracking-wide">un moment chaleureux</span>
+<div class="h-1 w-24 bg-secondary rounded-full -mt-1 opacity-70"></div>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1 mb-space-xs">
+        Réserver votre table
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+        Que ce soit pour un déjeuner d'affaires au calme, un dîner convivial en famille ou un tête-à-tête gourmand à Ndogbong.
+      </p>
+</div>
+<!-- Main Grid: Left (Form 60%) / Right (Ambiance & Details 40%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN : FORMULAIRE INTERACTIF -->
+<section class="lg:col-span-7 flex flex-col gap-space-lg">
+<form class="bg-surface-container-lowest rounded-xl p-space-md sm:p-space-xl shadow-[0_4px_24px_rgba(31,20,16,0.06)] flex flex-col gap-space-xl" id="reservationForm" onsubmit="handleReservationSubmit(event)">
+<!-- ÉTAPE 1 : Date & Heure -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Date &amp; Heure souhaitées</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> Service continu
+              </span>
+</div>
+<!-- Warning notice for Monday -->
+<div class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-secondary shrink-0">event_busy</span>
+<p class="font-label-sm text-label-sm">
+<strong class="text-on-surface">Attention :</strong> La Plazza est fermée le lundi. Réservations ouvertes du mardi au dimanche.
+              </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5" for="resDate">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span> Date du repas
+                </label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="resDate" min="2025-05-01" required="" type="date"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5" for="resTime">
+<span class="material-symbols-outlined text-[18px] text-primary">alarm</span> Créneau horaire
+                </label>
+<select class="w-full px-4 py-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="resTime" required="">
+<option disabled="" selected="" value="">Choisir une heure</option>
+<optgroup label="Déjeuner (Midi)">
+<option value="12:00">12 h 00</option>
+<option value="12:30">12 h 30</option>
+<option value="13:00">13 h 00</option>
+<option value="13:30">13 h 30</option>
+<option value="14:00">14 h 00</option>
+</optgroup>
+<optgroup label="Dîner (Soirée)">
+<option value="19:00">19 h 00</option>
+<option value="19:30">19 h 30</option>
+<option value="20:00">20 h 00</option>
+<option value="20:30">20 h 30</option>
+<option value="21:00">21 h 00</option>
+<option value="21:30">21 h 30</option>
+</optgroup>
+</select>
+</div>
+</div>
+<!-- Quick Slots Pills -->
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Créneaux fréquents :</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-sm text-label-sm transition-colors" onclick="selectSlot('12:30')" type="button">12h30</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-sm text-label-sm transition-colors" onclick="selectSlot('13:00')" type="button">13h00</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-sm text-label-sm transition-colors" onclick="selectSlot('19:30')" type="button">19h30</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-sm text-label-sm transition-colors" onclick="selectSlot('20:30')" type="button">20h30</button>
+</div>
+</div>
+<div class="h-px w-full bg-surface-variant opacity-60"></div>
+<!-- ÉTAPE 2 : Nombre de personnes -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm flex items-center justify-center font-bold">2</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Nombre de convives</h2>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md p-4 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">group</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Taille de la tablée</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Adultes &amp; enfants inclus</p>
+</div>
+</div>
+<!-- Stepper Widget -->
+<div class="flex items-center justify-center gap-3 bg-surface-container-lowest px-4 py-2 rounded-full shadow-sm">
+<button aria-label="Diminuer" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors active:scale-95" onclick="updateGuests(-1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="font-price-tag text-price-tag text-on-surface w-8 text-center select-none" id="guestCountDisplay">2</span>
+<input id="guestsInput" type="hidden" value="2"/>
+<button aria-label="Augmenter" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors active:scale-95" onclick="updateGuests(1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Quick Chips -->
+<div class="flex flex-wrap items-center gap-2">
+<button class="guest-chip active-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md font-semibold transition-all" onclick="setGuests(2)" type="button">2 personnes</button>
+<button class="guest-chip px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-all" onclick="setGuests(4)" type="button">4 personnes</button>
+<button class="guest-chip px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-all" onclick="setGuests(6)" type="button">6 personnes</button>
+<button class="guest-chip px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-all" onclick="setGuests(8)" type="button">Groupe 8+</button>
+</div>
+</div>
+<div class="h-px w-full bg-surface-variant opacity-60"></div>
+<!-- ÉTAPE 3 : Choix de l'espace -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm flex items-center justify-center font-bold">3</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Choix de l'espace</h2>
+</div>
+<input id="spaceInput" type="hidden" value="mezzanine"/>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<!-- Option 1: RDC -->
+<button class="space-card text-left p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between gap-3 group" onclick="selectSpace('rdc', this)" type="button">
+<div class="flex items-center justify-between w-full">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+</div>
+<span class="status-check opacity-0 material-symbols-outlined text-[18px] text-primary">check_circle</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] leading-tight text-on-surface font-bold">RDC animé</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Convivial, vue sur comptoir &amp; vitrine grillades.</p>
+</div>
+</button>
+<!-- Option 2: Mezzanine (Selected by default) -->
+<button class="space-card selected-space text-left p-3.5 rounded-xl bg-surface-container-high shadow-sm transition-all flex flex-col justify-between gap-3 group" onclick="selectSpace('mezzanine', this)" type="button">
+<div class="flex items-center justify-between w-full">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[18px]">ac_unit</span>
+</div>
+<span class="status-check material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-1 text-secondary font-label-sm text-[11px] uppercase font-bold tracking-wider">Favori</div>
+<h3 class="font-headline-sm text-[16px] leading-tight text-on-surface font-bold">Mezzanine feutrée</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Climatisée, cadre intime, calme pour affaires ou tête-à-tête.</p>
+</div>
+</button>
+<!-- Option 3: Terrasse -->
+<button class="space-card text-left p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between gap-3 group" onclick="selectSpace('terrasse', this)" type="button">
+<div class="flex items-center justify-between w-full">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[18px]">deck</span>
+</div>
+<span class="status-check opacity-0 material-symbols-outlined text-[18px] text-primary">check_circle</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] leading-tight text-on-surface font-bold">Terrasse couverte</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Douce brise, ambiance plein air abritée des averses.</p>
+</div>
+</button>
+</div>
+</div>
+<div class="h-px w-full bg-surface-variant opacity-60"></div>
+<!-- ÉTAPE 4 : Coordonnées de contact -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm flex items-center justify-center font-bold">4</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Vos coordonnées</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="fullName">Nom &amp; prénom complets *</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="fullName" placeholder="Ex : Jean-Paul Eboa" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="phone">
+<span>Téléphone / WhatsApp *</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Douala (+237)</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 font-label-md text-label-md text-on-surface-variant font-bold select-none">+237</span>
+<input class="w-full pl-16 pr-4 py-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="phone" placeholder="678 18 49 30" required="" type="tel"/>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="email">
+<span>Adresse e-mail</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Facultatif</span>
+</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="email" placeholder="nom@exemple.cm" type="email"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="specialRequest">
+                Occasion ou demande spécifique
+              </label>
+<textarea class="w-full px-4 py-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary-container transition-all resize-none" id="specialRequest" placeholder="Ex : Anniversaire surprise, placement table calme, chaise haute bébé, commande de gâteau..." rows="3"></textarea>
+</div>
+</div>
+<!-- ACTIONS & REASSURANCE -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<button class="w-full py-4 px-8 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold shadow-[0_4px_16px_rgba(232,145,26,0.30)] hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer" type="submit">
+<span>Envoyer ma demande de réservation</span>
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</button>
+<div class="flex flex-col items-center gap-3 text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span>Confirmation rapide sous 15 minutes par WhatsApp ou appel direct. Aucune avance bancaire requise.</span>
+</p>
+<!-- Secondary WhatsApp Action -->
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-bold transition-all" href="https://wa.me/237678184930?text=Bonjour%20La%20Plazza,%20je%20souhaite%20r%C3%A9server%20une%20table%20pour%20ce%20repas." rel="noopener noreferrer" target="_blank">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+</span>
+<span>Réserver directement par WhatsApp (+237 678 18 49 30)</span>
+</a>
+</div>
+</div>
+</form>
+<!-- Feedback Success Box (Initially Hidden) -->
+<div class="hidden p-space-lg rounded-xl bg-surface-container-high text-on-surface flex items-start gap-4" id="reservationSuccess">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">check</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Demande enregistrée avec succès !</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Notre équipe à Ndogbong prépare votre table. Vous recevrez un appel ou un message WhatsApp d'ici 15 minutes pour confirmation.
+            </p>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN : AMBIANCE, HORAIRES & GROUPES -->
+<aside class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- CARTE 1 : Visuels immersifs des espaces -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(31,20,16,0.06)] flex flex-col">
+<div class="relative w-full h-56 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Intérieur chaleureux et raffiné du restaurant La Plazza à Douala. Mezzanine avec mobilier en bois exotique verni, banquettes confortables caramel, luminaires tamisés en rotin et suspension dorée. Ambiance feutrée, plantes tropicales d'intérieur et tables dressées élégamment avec verres et serviettes soignées." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe3AfS_8eWGvaiYTY3lC42HnteFDxnr3n8b0sUIg8RxM2k8u1OhMfHX1rGsC5p8AbkfmSFTerY44pM7-X5ze-If-GMJb9Xj-g7V9w8C0erj-8P9Basbs2_aq8KxC0uJoCwKILMvNcaxhM8A5Q8zFtAfnJM-Sy4fNsTfjLBu4SbHjzi2xrTwsEmMfr32sgLZrEvxNu2IYD6Gbr3f7NxFbfhcsVWyoMayktddAi-kjvc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-on-primary">
+<span class="font-headline-sm text-[18px] font-bold">Espaces &amp; Cadre de vie</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold">Ndogbong</span>
+</div>
+</div>
+<div class="p-space-md sm:p-space-lg flex flex-col gap-space-md">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Pensé pour vos retrouvailles au cœur de Ndogbong. Profitez d'un confort moderne sans compromis sur l'hospitalité camerounaise.
+            </p>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-secondary shrink-0">mode_fan</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Climatisation continue &amp; tempérée</span>
+</div>
+<div class="flex items-center gap-3 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">wifi</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Wi-Fi haut débit gratuit pour convives</span>
+</div>
+<div class="flex items-center gap-3 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-tertiary shrink-0">local_parking</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Parking sécurisé avec vigile (Fin goudron)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CARTE 2 : Tableau des horaires d'ouverture -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md sm:p-space-lg shadow-[0_4px_20px_rgba(31,20,16,0.06)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px] text-primary">calendar_month</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Horaires d'ouverture</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Heure locale GMT+1</span>
+</div>
+<div class="flex flex-col divide-y divide-surface-variant/40 font-body-sm text-body-sm">
+<div class="py-2.5 flex items-center justify-between text-on-surface">
+<span class="font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Lundi</span>
+</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Fermé</span>
+</div>
+<div class="py-2.5 flex items-center justify-between text-on-surface">
+<span class="font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Mardi – Vendredi</span>
+</span>
+<span class="font-semibold text-on-surface">10 h 00 – 22 h 00</span>
+</div>
+<div class="py-2.5 flex items-center justify-between text-on-surface">
+<span class="font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Samedi</span>
+</span>
+<span class="font-semibold text-on-surface">10 h 00 – 23 h 00</span>
+</div>
+<div class="py-2.5 flex items-center justify-between text-on-surface">
+<span class="font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Dimanche</span>
+</span>
+<span class="font-semibold text-on-surface">12 h 00 – 23 h 00</span>
+</div>
+</div>
+</div>
+<!-- CARTE 3 : Groupes & Événements Privés -->
+<div class="relative overflow-hidden bg-secondary text-on-secondary rounded-xl p-space-md sm:p-space-lg shadow-[0_4px_24px_rgba(181,37,41,0.18)] flex flex-col gap-space-md">
+<!-- Decorative concentric ring subtle background -->
+<svg class="absolute -right-12 -bottom-12 w-48 h-48 opacity-10 pointer-events-none" fill="none" stroke="currentColor" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="45" stroke-width="2"></circle>
+<circle cx="50" cy="50" r="32" stroke-width="2"></circle>
+<circle cx="50" cy="50" r="18" stroke-width="2"></circle>
+</svg>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[24px] text-secondary-fixed">celebration</span>
+<h2 class="font-headline-sm text-headline-sm text-on-secondary">Événements &amp; Groupes (&gt; 10 pers)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-secondary/90 leading-relaxed">
+            Anniversaires surprises, soutenances, réunions corporate ou célébrations familiales. Nous concevons pour vous des menus personnalisés autour de nos poissons braisés entiers, poulets du pays et cocktails maison.
+          </p>
+<div class="p-3 rounded-lg bg-on-secondary/10 flex flex-col gap-2">
+<div class="flex items-center justify-between text-secondary-fixed font-label-md text-label-md font-bold">
+<span>Ligne directe événements</span>
+<span>Douala</span>
+</div>
+<div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-secondary">
+<a class="hover:text-secondary-fixed transition-colors flex items-center gap-2" href="tel:+237678184930">
+<span class="material-symbols-outlined text-[18px]">phone</span>
+<span>+237 678 18 49 30</span>
+</a>
+<a class="hover:text-secondary-fixed transition-colors flex items-center gap-2" href="tel:+237656927470">
+<span class="material-symbols-outlined text-[18px]">phone</span>
+<span>+237 656 92 74 70</span>
+</a>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold hover:bg-surface-container-lowest transition-all" href="https://wa.me/237678184930?text=Bonjour,%20je%20souhaite%20organiser%20un%20%C3%A9v%C3%A9nement%20de%20groupe%20%C3%A0%20La%20Plazza." rel="noopener noreferrer" target="_blank">
+<span>Devis &amp; Menu spécial groupe</span>
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</a>
+</div>
+</aside>
+</div>
+</div>
+<script>
+    // Guest stepper logic
+    function updateGuests(delta) {
+      const input = document.getElementById('guestsInput');
+      const display = document.getElementById('guestCountDisplay');
+      let val = parseInt(input.value, 10) + delta;
+      if (val < 1) val = 1;
+      if (val > 24) val = 24;
+      input.value = val;
+      display.textContent = val;
+      updateActiveGuestChip(val);
+    }
+
+    function setGuests(num) {
+      const input = document.getElementById('guestsInput');
+      const display = document.getElementById('guestCountDisplay');
+      input.value = num;
+      display.textContent = num;
+      updateActiveGuestChip(num);
+    }
+
+    function updateActiveGuestChip(num) {
+      const chips = document.querySelectorAll('.guest-chip');
+      chips.forEach(chip => {
+        const text = chip.textContent.trim();
+        const matches = (num === 2 && text.startsWith('2')) ||
+                        (num === 4 && text.startsWith('4')) ||
+                        (num === 6 && text.startsWith('6')) ||
+                        (num >= 8 && text.includes('8+'));
+        if (matches) {
+          chip.classList.add('bg-primary-container', 'text-on-primary-container');
+          chip.classList.remove('bg-surface-container-low', 'text-on-surface');
+        } else {
+          chip.classList.remove('bg-primary-container', 'text-on-primary-container');
+          chip.classList.add('bg-surface-container-low', 'text-on-surface');
+        }
+      });
+    }
+
+    // Space selection logic
+    function selectSpace(spaceName, element) {
+      document.getElementById('spaceInput').value = spaceName;
+      const allCards = document.querySelectorAll('.space-card');
+      allCards.forEach(card => {
+        card.classList.remove('bg-surface-container-high', 'shadow-sm');
+        card.classList.add('bg-surface-container-low');
+        const icon = card.querySelector('.status-check');
+        if (icon) icon.classList.add('opacity-0');
+      });
+      element.classList.remove('bg-surface-container-low');
+      element.classList.add('bg-surface-container-high', 'shadow-sm');
+      const activeIcon = element.querySelector('.status-check');
+      if (activeIcon) activeIcon.classList.remove('opacity-0');
+    }
+
+    // Quick Slot picker
+    function selectSlot(timeStr) {
+      const timeSelect = document.getElementById('resTime');
+      if (timeSelect) {
+        timeSelect.value = timeStr;
+      }
+    }
+
+    // Form submit interaction
+    function handleReservationSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('reservationForm');
+      const successBox = document.getElementById('reservationSuccess');
+      if (form && successBox) {
+        form.classList.add('opacity-50', 'pointer-events-none');
+        setTimeout(() => {
+          form.classList.add('hidden');
+          successBox.classList.remove('hidden');
+          successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 500);
+      }
+    }
+
+    // Pre-select current chip styling on load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateActiveGuestChip(2);
+      // Auto-set tomorrow's date by default
+      const dateInput = document.getElementById('resDate');
+      if (dateInput) {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const yyyy = tomorrow.getFullYear();
+        const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+        const dd = String(tomorrow.getDate()).padStart(2, '0');
+        dateInput.value = `${yyyy}-${mm}-${dd}`;
+      }
+    });
+  </script>
+</div></main><aside aria-label="Assistance rapide" class="fixed bottom-6 right-6 z-40"><a class="flex items-center gap-2 px-4 py-3 rounded-full bg-surface-container-lowest text-on-surface shadow-[0_10px_28px_rgba(31,20,16,0.16)] hover:bg-surface-container-low transition-all active:scale-[0.98]" href="https://wa.me/237678184930" rel="noopener noreferrer" target="_blank"><span class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">chat</span></span><span class="font-label-md text-label-md font-bold tracking-tight text-on-surface">WhatsApp</span></a></aside><footer class="w-full bg-secondary text-on-secondary py-space-xl"><div class="max-w-[1200px] mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="capture_logo.PNG" class="h-8 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AEtjO1WdrjdyeHm3u4WdG-Nkg3SRgEhRUM2D1s92zBUfUHhenF-1zk49KYbkbeiE2nKRu478BFWliN1VAyKI4j23UYodQUBgjcYEtpq9KuoRV_WmpA23BpiNdqZMQP5J4VQsDJbnjKUbUq6ngCnFACZ5DymcPby9kGIM8BzdzuKCKA780wUEKrb3ElZnNZok3PxQT5eYU9U7sznjhBjoSyk2CWo-o13ioD8-_e45HfW27FATSWIyPBCxXky2BZY"/><span class="font-headline-sm text-headline-sm text-on-secondary">La Plazza</span></div><p class="font-script-accent text-script-accent text-secondary-fixed">Choisissez le meilleur goût</p><p class="font-body-sm text-body-sm text-on-secondary/80 flex items-start gap-1.5 pt-space-xs"><span class="material-symbols-outlined text-[18px] shrink-0 text-secondary-fixed">location_on</span><span>Fin goudron, Ndogbong, Douala, Cameroun</span></p></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed font-bold">Horaires d'ouverture</span><ul class="font-body-sm text-body-sm space-y-1.5 text-on-secondary/80"><li class="flex justify-between"><span class="font-medium">Mar – Ven:</span><span>10h00 – 22h00</span></li><li class="flex justify-between"><span class="font-medium">Samedi:</span><span>10h00 – 23h00</span></li><li class="flex justify-between"><span class="font-medium">Dimanche:</span><span>12h00 – 23h00</span></li><li class="flex justify-between text-secondary-fixed"><span class="font-medium">Lundi:</span><span>Fermé</span></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed font-bold">Contact &amp; Commandes</span><div class="font-body-sm text-body-sm space-y-2 text-on-secondary/80"><a class="flex items-center gap-2 hover:text-secondary-fixed transition-colors" href="tel:+237678184930"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">phone_iphone</span><span>+237 678 18 49 30</span></a><a class="flex items-center gap-2 hover:text-secondary-fixed transition-colors" href="tel:+237656927470"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">call</span><span>+237 656 92 74 70</span></a><a class="flex items-center gap-2 hover:text-secondary-fixed transition-colors" href="https://wa.me/237678184930" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">forum</span><span>WhatsApp Direct</span></a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed font-bold">Paiements Acceptés</span><div class="flex flex-wrap gap-2 pt-1"><span class="px-2.5 py-1 rounded-full bg-on-secondary/10 font-label-sm text-label-sm text-on-secondary font-medium">Espèces</span><span class="px-2.5 py-1 rounded-full bg-on-secondary/10 font-label-sm text-label-sm text-on-secondary font-medium">MTN MoMo</span><span class="px-2.5 py-1 rounded-full bg-on-secondary/10 font-label-sm text-label-sm text-on-secondary font-medium">Orange Money</span></div><p class="font-body-sm text-body-sm text-on-secondary/70 text-xs pt-space-sm leading-relaxed">L'abus d'alcool est dangereux pour la santé. À consommer avec modération. Vente interdite aux mineurs.</p></div></div><div class="pt-space-md mt-space-md border-t border-on-secondary/15 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-secondary/75 font-body-sm text-body-sm"><p>© 2025 La Plazza. Tous droits réservés.</p><div class="flex items-center gap-space-lg"><a class="hover:text-secondary-fixed transition-colors" data-path="contact" href="#">Mentions légales</a><a class="hover:text-secondary-fixed transition-colors" data-path="contact" href="#">Politique de confidentialité</a></div></div></div></footer></body></html>

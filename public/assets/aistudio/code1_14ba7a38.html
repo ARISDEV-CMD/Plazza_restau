@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#59431d", "error": "#ba1a1a", "background": "#fff8f6", "inverse-on-surface": "#ffede7", "tertiary-container": "#bea071", "on-error": "#ffffff", "surface-variant": "#f4ded7", "surface-dim": "#ebd5ce", "tertiary-fixed": "#ffdeac", "on-primary-fixed": "#2c1700", "primary-fixed-dim": "#ffb86a", "surface-bright": "#fff8f6", "on-secondary-fixed": "#410004", "on-error-container": "#93000a", "on-tertiary-fixed": "#281900", "inverse-primary": "#ffb86a", "secondary-fixed": "#ffdad7", "on-surface-variant": "#534435", "secondary": "#b52529", "surface": "#fff8f6", "on-secondary": "#ffffff", "on-primary-container": "#573200", "surface-container": "#ffe9e2", "error-container": "#ffdad6", "surface-container-highest": "#f4ded7", "on-secondary-fixed-variant": "#920315", "primary-container": "#e8911a", "surface-container-high": "#fae3dc", "surface-container-lowest": "#ffffff", "tertiary-fixed-dim": "#e2c290", "primary": "#895200", "on-primary": "#ffffff", "tertiary": "#735a32", "on-tertiary": "#ffffff", "on-tertiary-container": "#4c3712", "secondary-container": "#fe5b58", "secondary-fixed-dim": "#ffb3ae", "on-surface": "#241915", "on-background": "#241915", "inverse-surface": "#3b2d29", "outline": "#867463", "on-secondary-container": "#600009", "surface-container-low": "#fff1ec", "outline-variant": "#d9c3af", "on-primary-fixed-variant": "#683d00", "surface-tint": "#895200", "primary-fixed": "#ffdcbc" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.25rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "space-md": "1rem", "margin": "1.5rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-lg-mobile": [ "Epilogue" ], "label-md": [ "Epilogue" ], "label-sm": [ "Inter" ], "headline-lg": [ "Epilogue" ], "display-mobile": [ "Epilogue" ], "body-sm": [ "Inter" ], "body-lg": [ "Inter" ], "body-md": [ "Inter" ], "price-tag": [ "Epilogue" ], "headline-sm": [ "Epilogue" ], "script-accent": [ "Epilogue" ], "headline-md": [ "Epilogue" ], "display": [ "Epilogue" ] }, "fontSize": { "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "0", "fontWeight": "700" } ], "label-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "display-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "price-tag": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "600" } ], "script-accent": [ "22px", { "lineHeight": "30px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "0", "fontWeight": "600" } ], "display": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_4px_16px_rgba(31,20,16,0.06)]"><div class="h-20 max-w-[1200px] mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="capture_logo.PNG" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WdrjdyeHm3u4WdG-Nkg3SRgEhRUM2D1s92zBUfUHhenF-1zk49KYbkbeiE2nKRu478BFWliN1VAyKI4j23UYodQUBgjcYEtpq9KuoRV_WmpA23BpiNdqZMQP5J4VQsDJbnjKUbUq6ngCnFACZ5DymcPby9kGIM8BzdzuKCKA780wUEKrb3ElZnNZok3PxQT5eYU9U7sznjhBjoSyk2CWo-o13ioD8-_e45HfW27FATSWIyPBCxXky2BZY"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">La Plazza</span><span class="font-label-sm text-label-sm text-on-surface-variant">Ndogbong · Douala</span></div><div class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Ouvert · jusqu'à 22 h</span></div></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors text-primary font-bold" data-path="accueil" href="#">Accueil</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu" href="#">Menu</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="reserver" href="#">Réserver</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="galerie" href="#">Galerie</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md shrink-0"><a class="hidden xl:flex items-center gap-1.5 text-on-surface font-label-md text-label-md hover:text-primary transition-colors" href="tel:+237678184930"><span class="material-symbols-outlined text-[18px] text-primary">call</span><span>+237 678 18 49 30</span></a><button aria-label="Panier" class="relative p-2 rounded-full text-on-surface hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute top-1 right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm leading-none font-bold">0</span></button><a class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-[0_2px_8px_rgba(232,145,26,0.25)] hover:bg-primary hover:text-on-primary active:scale-[0.98] transition-all" data-path="menu" href="#">Commander</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- 1. HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-surface via-surface-container-low to-surface-container py-12 lg:py-20">
+<!-- Decorative circular watermark ring -->
+<div class="pointer-events-none absolute -top-24 -right-24 h-[580px] w-[580px] rounded-full opacity-20">
+<svg class="h-full w-full text-primary-container" fill="none" stroke="currentColor" viewbox="0 0 500 500">
+<circle cx="250" cy="250" r="230" stroke-dasharray="8 8" stroke-width="1.5"></circle>
+<circle cx="250" cy="250" r="190" stroke-width="3"></circle>
+<circle cx="250" cy="250" r="140" stroke-dasharray="4 6" stroke-width="1.5"></circle>
+</svg>
+</div>
+<div class="max-w-[1200px] mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Colonne Gauche -->
+<div class="lg:col-span-7 flex flex-col items-start gap-6 z-10">
+<!-- Google Review Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest shadow-sm">
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">4,7/5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">· 280+ avis Google vérifiés</span>
+</div>
+<!-- Main Heading -->
+<div class="space-y-2">
+<h1 class="font-headline-lg text-headline-lg lg:text-[44px] lg:leading-[52px] text-on-surface tracking-tight font-bold">
+              Choisissez le 
+              <span class="relative inline-block font-script-accent text-script-accent text-primary-container text-[42px] lg:text-[50px] leading-tight px-1 font-semibold">
+                meilleur goût
+                <svg class="absolute -bottom-2 left-0 w-full h-3 text-secondary" fill="none" preserveaspectratio="none" viewbox="0 0 200 12">
+<path d="M2 9C50 3 150 1 198 8" stroke="currentColor" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+</span>
+              à Douala
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl pt-2 leading-relaxed">
+              Poulet pané croustillant, frit doré et braisé aux aromates du terroir, accompagnements frais et jus pressés maison. Sur place dans notre cadre apaisant à Ndogbong, à emporter ou en livraison express.
+            </p>
+</div>
+<!-- CTAs Row -->
+<div class="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto">
+<a class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-md hover:bg-primary hover:text-on-primary active:scale-[0.98] transition-all" href="#menu-signature">
+<span>Commander maintenant</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-bold hover:bg-surface-variant transition-all" href="#composez">
+<span>Découvrir le menu</span>
+</a>
+<a class="inline-flex items-center gap-1.5 text-secondary font-label-md text-label-md font-bold hover:underline ml-2" href="#acces-ndogbong">
+<span class="material-symbols-outlined text-[18px]">near_me</span>
+<span>Ndogbong fin goudron</span>
+</a>
+</div>
+<!-- Trust Micro Badges -->
+<div class="flex items-center gap-6 pt-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Volaille fraîche du jour</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Livraison Ndogbong &amp; Douala</span>
+</div>
+</div>
+</div>
+<!-- Colonne Droite: Photo Hero avec Ring Visuel -->
+<div class="lg:col-span-5 relative flex justify-center items-center">
+<!-- Concentric Ring Backdrop -->
+<div class="absolute h-[380px] w-[380px] sm:h-[420px] sm:w-[420px] rounded-full bg-surface-container-highest animate-pulse opacity-60"></div>
+<div class="absolute h-[340px] w-[340px] sm:h-[380px] sm:w-[380px] rounded-full bg-primary-container/15"></div>
+<!-- Circular Hero Plate -->
+<div class="relative w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] rounded-full overflow-hidden shadow-2xl bg-surface-container-low flex items-center justify-center p-2">
+<img class="w-full h-full object-cover rounded-full transition-transform duration-700 hover:scale-105" data-alt="Appetizing golden crispy fried chicken breast pieces and fried yellow plantains alloco arranged generously on an elegant ceramic plate with a small dish of house spicy sauce. Studio lighting with warm amber and deep red tones reflecting Cameroonian culinary warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW8O-sWnmBQby4RInFRg9UYTJKsJfmxjNojATr1FNqzZZAUM11dTOOOLf-zbB7eQZItQENAcgYBIuMyPSYUEkrDu1nDh0T531YVjjdiVrtlBb4ZXEbo2jeP4kjV2wimjDN5wCPXHSbDD-SCOLHaG21i8krBFNq3yL-6BYmOxfQ1kJUV96_c1AcQjGtZ0L1DYgio2y9EhHH92GlTz9yYY8SOW3ba1k9Y3eKUpmhgmPq"/>
+</div>
+<!-- Badge Flottant Prix -->
+<div class="absolute -bottom-2 left-4 sm:left-6 px-5 py-3 rounded-2xl bg-surface-container-lowest shadow-xl flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container font-bold">
+<span class="material-symbols-outlined text-[20px]">restaurant</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Poulet pané signature</span>
+<span class="font-price-tag text-price-tag text-secondary font-bold">Dès 1 500 FCFA</span>
+</div>
+</div>
+<!-- Pastille Fait Maison -->
+<div class="absolute top-2 right-4 px-4 py-2.5 rounded-full bg-secondary text-on-secondary shadow-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">favorite</span>
+<span class="font-label-sm text-label-sm font-bold tracking-tight">100% Fait maison</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. BANDEAU D'INFOS CLÉS (INFO STRIP) -->
+<section class="relative -mt-6 z-20 max-w-[1200px] mx-auto px-margin w-full">
+<div class="w-full rounded-2xl bg-surface-container-lowest shadow-lg p-6 lg:p-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-center">
+<!-- Col 1 : Statut Horaires -->
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[26px]">schedule</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Ouvert aujourd'hui</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">10 h 00 – 22 h 00 · Ndogbong fin goudron</p>
+</div>
+</div>
+<!-- Col 2 : Services -->
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[26px]">takeout_dining</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Service flexible</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sur place · À emporter · Livraison Ndogbong</p>
+</div>
+</div>
+<!-- Col 3 : Paiements locaux -->
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[26px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Paiements simples &amp; sécurisés</span>
+<div class="flex items-center gap-2 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-[11px] font-bold text-on-surface">Espèces</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-[11px] font-bold text-primary">MTN MoMo</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-[11px] font-bold text-secondary">Orange Money</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SECTION "NOS INCONTOURNABLES" -->
+<section class="w-full py-16 lg:py-24 bg-surface" id="menu-signature">
+<div class="max-w-[1200px] mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center gap-2 mb-12">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Carte Gourmande</span>
+<div class="relative inline-block">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+            Nos incontournables
+          </h2>
+<svg class="w-full h-3 text-secondary mt-1" fill="none" preserveaspectratio="none" viewbox="0 0 160 10">
+<path d="M4 7C45 2 115 2 156 6" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          Les recettes signature de La Plazza les plus commandées par nos clients au quotidien à Ndogbong.
+        </p>
+</div>
+<!-- Grid 4 Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 : Poulet Pané -->
+<div class="group flex flex-col rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Golden crisp coated fried chicken thigh with visible crispy spice flakes on a clean slate board with lime wedges. Warm appetizing photography, deep amber and burgundy color accent tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBty0TjNwOey3JlG5-n9T4Il0p3mShYQc-ZKm50HkKMKDU3eVksaQXmJ-7tWtI6FJX12tn1Hh6jgVWVkF4rnXMrZgizUllBeFcexEXqvQSyr1ki90DC3EzMBX5duP0uXwmIqpFYTxetFjVrgVdB3LUJHQKqgPUZcU4ydX4lWAchgS2LMC5Vpe3fVx4QgrHkfa4dj3FQx-9yBJTR4c0sOEJ1MosYS2nEdmIC18peO5UC"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[11px] font-bold">
+              Signature
+            </span>
+</div>
+<div class="p-5 flex flex-col flex-grow justify-between gap-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Poulet pané (1 pièce)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1">
+                Morceau généreux mariné aux épices secrètes, panure croustillante et chair tendre.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-price-tag text-price-tag text-secondary font-bold">1 500 FCFA</span>
+<button class="inline-flex items-center gap-1 px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold hover:bg-primary hover:text-on-primary active:scale-95 transition-all" type="button">
+<span>Ajouter</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 : 1/2 Poulet Frit -->
+<div class="group flex flex-col rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Half fried golden chicken beautifully seasoned with local Cameroonian spices cut into juicy pieces on greaseproof paper in a wicker basket. Natural daylight, warm rich brown and orange hues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfbCqD3YWV7qDodXHdaSYUOcz_gzCILzcTSJfjUZS9b9qkYOhViBYn9E6GoKns3yrp044dT4eb7avNy8I7BRQZ0giuE44NT3SincMj71pzi8ApylwWKN5lwY8yT9mPfxa_OaxiDIOD9lj2df7_iNg37n0kHjy-HiMsUErNSnYa3ENN07G6nqVYifnXlOaMUNd2SoYjK5Oujvi5gtGIoYaMH3UeMWn6ztuxbYNaTWQa"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[11px] font-bold">
+              Populaire
+            </span>
+</div>
+<div class="p-5 flex flex-col flex-grow justify-between gap-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">½ Poulet frit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1">
+                Demi-poulet doré à point, juteux à cœur, assaisonnement traditionnel relevé.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-price-tag text-price-tag text-secondary font-bold">5 000 FCFA</span>
+<button class="inline-flex items-center gap-1 px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold hover:bg-primary hover:text-on-primary active:scale-95 transition-all" type="button">
+<span>Ajouter</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 : Poulet Braisé Entier -->
+<div class="group flex flex-col rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Whole Cameroonian charcoal grilled chicken charred to perfection with dark savory marinade glaze, garnished with fresh sliced onions, tomato rings, and green peppers on a rustic wooden platter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBf9e_BFJjKVcbeSAITYeF9evjvuaakKTdsGaCMkbDGKHFN3oMZmRs6An9PsCbSZJq2UxnJ__SSiGJjDfUlzqqpUQXy7ODUXliFh_UeWZVcXiPf0Q-XAA0_tBZuPMUtE5Szvnf0c0wqldIhw_1oU71FJUF_5wp0kX6bspijViLq93rGOb-88QjdF9L1rwjHj0cn5L9Z1Qh9TvKp--M13TYqy1l1BpjoSqXO3PdfWCg"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-[11px] font-bold">
+              Grand Format
+            </span>
+</div>
+<div class="p-5 flex flex-col flex-grow justify-between gap-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Poulet braisé entier</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1">
+                Poulet entier braisé sur braises vives de bois, sauce pimentée maison et aromates.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-price-tag text-price-tag text-secondary font-bold">10 000 FCFA</span>
+<button class="inline-flex items-center gap-1 px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold hover:bg-primary hover:text-on-primary active:scale-95 transition-all" type="button">
+<span>Ajouter</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4 : Jus de Baobab -->
+<div class="group flex flex-col rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="One liter glass carafe of thick creamy natural baobab fruit juice with fresh vanilla pod and crushed ice drops on wet chilled glass. Warm sunny background with cream and amber undertones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnCmqUJWLcb5j8qqBrauC61ugzWNsZME7pMrQhIoobQFGQU_Gy5e32ZQE8OXWdZyDEmqzGSLLkCrxl7e1eWYQoDShZjTmNiOnRYFZ6C9zi9UgToy9NQukrE9sYYSsQ3GRRf2lnjtyG25Sd54c3y8XqCNOWdSdcDDSbul1Jqg0wjpZUKZJDmBgN62AolbJtDfrPNSQUSiaHqGNZ775tLo7mzXUaYOOncnvyp4yNWVqc"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px] font-bold">
+              Artisanal
+            </span>
+</div>
+<div class="p-5 flex flex-col flex-grow justify-between gap-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Jus de baobab (1 L)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1">
+                Boisson artisanale onctueuse, fraîche et délicatement acidulée, riche en vitamines.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-price-tag text-price-tag text-secondary font-bold">1 000 FCFA</span>
+<button class="inline-flex items-center gap-1 px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold hover:bg-primary hover:text-on-primary active:scale-95 transition-all" type="button">
+<span>Ajouter</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SECTION "COMPOSEZ VOTRE ASSIETTE" -->
+<section class="w-full py-16 lg:py-24 bg-surface-container-low" id="composez">
+<div class="max-w-[1200px] mx-auto px-margin">
+<div class="flex flex-col items-center text-center gap-2 mb-14">
+<span class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Formule Personnalisée</span>
+<div class="relative inline-block">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+            Composez votre assiette
+          </h2>
+<svg class="w-full h-3 text-primary-container mt-1" fill="none" preserveaspectratio="none" viewbox="0 0 160 10">
+<path d="M2 8C50 2 120 3 158 7" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          Votre repas sur-mesure préparé à la minute selon vos envies et vos préférences.
+        </p>
+</div>
+<!-- 3 Steps Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+<!-- Step 1 -->
+<div class="flex flex-col items-start p-8 rounded-2xl bg-surface-container-lowest shadow-md relative">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold flex items-center justify-center mb-6">
+            1
+          </div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wide">Étape essentielle</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Choisissez votre poulet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2 leading-relaxed">
+            Pané extra croustillant aux épices douces, frit doré et fondant, ou braisé artisanalement au feu de bois avec notre marinade secrète.
+          </p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Pané</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Frit</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Braisé</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-start p-8 rounded-2xl bg-surface-container-lowest shadow-md relative">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold flex items-center justify-center mb-6">
+            2
+          </div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wide">Accompagnements chauds</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Ajoutez vos garnitures</h3>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2 leading-relaxed">
+            Plantains alloco fondants et caramélisés, frites fraîches de pommes de terre croustillantes, bâtons de miondo traditionnels ou riz parfumé.
+          </p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Dès 500 FCFA</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Alloco</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Miondo</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Frites</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-start p-8 rounded-2xl bg-surface-container-lowest shadow-md relative">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold flex items-center justify-center mb-6">
+            3
+          </div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wide">Touche finale</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Terminez par une boisson</h3>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2 leading-relaxed">
+            Jus naturels pressés à Douala (Bissap, Baobab velouté, Ananas-gingembre vivifiant) ou sodas très frais pour équilibrer chaque bouchée.
+          </p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Bissap</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Baobab</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Sodas frais</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SECTION "BOISSONS LOCALES NATURELLES" -->
+<section class="w-full py-16 lg:py-24 bg-surface">
+<div class="max-w-[1200px] mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+<div>
+<span class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Fraîcheur &amp; Terroir</span>
+<div class="relative inline-block mt-1">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+              Boissons locales &amp; rafraîchissements
+            </h2>
+<svg class="w-full h-3 text-secondary mt-1" fill="none" preserveaspectratio="none" viewbox="0 0 200 10">
+<path d="M2 7C60 2 140 2 198 7" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2 max-w-xl">
+            Préparées chaque matin sans conservateurs avec les fruits et feuilles récoltés localement.
+          </p>
+</div>
+<div class="shrink-0">
+<span class="px-4 py-2 rounded-full bg-surface-container font-label-sm text-label-sm font-bold text-on-surface">
+            Format individuel &amp; carafes 1L
+          </span>
+</div>
+</div>
+<!-- 5 Cards Layout -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+<!-- Boisson 1 -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow p-5 justify-between">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-[26px]">local_bar</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Jus d'oseille (Bissap)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1">
+              Infusion fraîche d'hibiscus parfumée à la menthe douce.
+            </p>
+</div>
+<div class="pt-5 border-none">
+<span class="font-price-tag text-price-tag text-secondary font-bold block">Dès 500 FCFA</span>
+</div>
+</div>
+<!-- Boisson 2 -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow p-5 justify-between">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[26px]">water_drop</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Jus de baobab</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1">
+              Velouté authentique, tonifiant et riche en énergie.
+            </p>
+</div>
+<div class="pt-5 border-none">
+<span class="font-price-tag text-price-tag text-secondary font-bold block">Dès 1 000 FCFA</span>
+</div>
+</div>
+<!-- Boisson 3 -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow p-5 justify-between">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[26px]">energy_savings_leaf</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Ananas &amp; gingembre</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1">
+              Équilibre fruité piquant, pressé à froid sans additif.
+            </p>
+</div>
+<div class="pt-5 border-none">
+<span class="font-price-tag text-price-tag text-secondary font-bold block">Dès 1 000 FCFA</span>
+</div>
+</div>
+<!-- Boisson 4 -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow p-5 justify-between">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-on-surface mb-4">
+<span class="material-symbols-outlined text-[26px]">coffee</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Menthe au lait</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1">
+              Douceur onctueuse et fraîcheur mentholée camerounaise.
+            </p>
+</div>
+<div class="pt-5 border-none">
+<span class="font-price-tag text-price-tag text-secondary font-bold block">Dès 1 000 FCFA</span>
+</div>
+</div>
+<!-- Boisson 5 -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow p-5 justify-between">
+<div class="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-[26px]">wine_bar</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Cocktail betterave</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1">
+              Cure revitalisante avec agrumes et pulpe naturelle.
+            </p>
+</div>
+<div class="pt-5 border-none">
+<span class="font-price-tag text-price-tag text-secondary font-bold block">Dès 1 500 FCFA</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SECTION "UN LIEU POUR SE RETROUVER" -->
+<section class="w-full py-16 lg:py-24 bg-surface-container-low">
+<div class="max-w-[1200px] mx-auto px-margin">
+<!-- Section Content Top -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
+<div class="lg:col-span-8 flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Atmosphère Ndogbong</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+            Un lieu chaleureux pour se retrouver
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+            Niché au cœur de Ndogbong, La Plazza propose deux atmosphères distinctes : un rez-de-chaussée vibrant et animé pour les repas conviviaux sur le pouce, et une mezzanine feutrée, climatisée et intimiste pour vos déjeuners d'affaires ou soirées détendues.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-wrap gap-2 lg:justify-end">
+<span class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">group</span> Entre amis
+          </span>
+<span class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">favorite</span> En couple
+          </span>
+<span class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">family_restroom</span> En famille
+          </span>
+<span class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">business_center</span> Rendez-vous pro
+          </span>
+</div>
+</div>
+<!-- 3 Photos Ambiance -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="h-80 rounded-2xl overflow-hidden shadow-md group relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern warm restaurant dining area with contemporary African wooden decor, stylish pendant lamps, and comfortable seating with patrons dining happily. Warm ambient amber light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4B68zrn7nl2vY9Y9GTTQrL72gBD4398BWw3-vn_0MvbV8-3k__2FBQTJZybvzzUgCOI4elFrFWqH3N65-eorr3TbxhOiCM41agkeME86FK2pRU9IHYCKj7xHZm7wdp0WgcyeyNir_ok7V-aD2N-kHuS9X8NA9xYzoxywZHLelYhlX-sJK4p-lL5gzVYeP1PQhKGdllFI1oHKsXDZ76uzn0fTlI_X8Cl0MLwbvDevN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-5">
+<span class="font-label-md text-label-md text-inverse-on-surface font-bold">Rez-de-chaussée animé</span>
+</div>
+</div>
+<div class="h-80 rounded-2xl overflow-hidden shadow-md group relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cozy intimate restaurant mezzanine lounge with soft lighting, cushioned chairs, small potted palms, and clean minimalist tables in a relaxed evening setting. Burgundy and brass tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALKGSUSM4yO98ItkhHOUF9mFRLrIDiWr6yr-4EAeJjqaddanY2B9MZA2Pj98R7gOfBMr9hSpTENnqbBdaTOq2Qxge7-2-XsK9r8fI0FyRrdRwwy5YQ4r5uOf_ZFwS1BQXxOFpiScgSd_hV17ij12rfGBp9v9vhpVkOSj3aKus4R_WbJFrHYdgAu7K2Jb9hSd35pxC4nn9Dj4jbgu_kmGZLnrDjLjvKfHH_hs03LFm9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-5">
+<span class="font-label-md text-label-md text-inverse-on-surface font-bold">Mezzanine climatisée &amp; privée</span>
+</div>
+</div>
+<div class="h-80 rounded-2xl overflow-hidden shadow-md group relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Smiling Cameroonian chef at open kitchen grill counter plating freshly fried chicken and fried plantains with care. Clean contemporary kitchen atmosphere, warm welcoming hospitality vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfS1H4N08E3qVP-z_UUcjDb8TET4M0Kwv3HoxgNhd_ADXHMf6-IWHCmpAlPrxHl6PytRtcuCBix9tqDzoTwGae5fBCPVXWXs1-pKf5YLWEuyW9ahixHAjkYHwEz82fEg27CwHOBZ-fEzzoZ-wcysCEiCWzWG0TDKWwv6CcH4gyr0NH_hF2r1WQ5aZ8pGcdWXzbwn0yQW4KeyHYpsZ36e3EUyPB4wB8D71CY6Xte3zW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-5">
+<span class="font-label-md text-label-md text-inverse-on-surface font-bold">Comptoir &amp; cuisine ouverte</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. BANDEAU CTA BOURGOGNE (RÉSERVATION) -->
+<section class="w-full bg-secondary text-on-secondary py-16 relative overflow-hidden">
+<!-- Decorative Rings in Burgundy -->
+<div class="pointer-events-none absolute right-0 top-0 bottom-0 w-96 opacity-15">
+<svg class="h-full w-full" fill="none" stroke="currentColor" viewbox="0 0 300 300">
+<circle cx="200" cy="150" r="140" stroke-width="2"></circle>
+<circle cx="200" cy="150" r="100" stroke-dasharray="6 6" stroke-width="1"></circle>
+<circle cx="200" cy="150" r="60" stroke-width="2"></circle>
+</svg>
+</div>
+<div class="max-w-[1200px] mx-auto px-margin relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
+<div class="max-w-2xl flex flex-col gap-2">
+<span class="font-label-md text-label-md text-secondary-fixed uppercase tracking-wider font-bold">Réservation Immédiate</span>
+<h2 class="font-headline-lg text-headline-lg text-on-secondary font-bold">
+            Une table pour ce soir ou pour le week-end ?
+          </h2>
+<p class="font-body-md text-body-md text-on-secondary/85 leading-relaxed">
+            Réservez votre place au rez-de-chaussée ou sur la mezzanine en quelques secondes, sans frais d'avance. Accueil personnalisé garanti pour vos groupes et événements.
+          </p>
+</div>
+<div class="shrink-0 flex flex-col sm:flex-row items-center gap-4">
+<a class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-lg hover:bg-primary hover:text-on-primary active:scale-[0.98] transition-all" data-path="reserver" href="#">
+<span class="material-symbols-outlined text-[20px]">table_restaurant</span>
+<span>Réserver une table</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-on-secondary/15 text-on-secondary font-label-md text-label-md font-bold hover:bg-on-secondary/25 transition-all" href="https://wa.me/237678184930" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>WhatsApp direct</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. BLOC LOCALISATION & ACCÈS (NDOGBONG) -->
+<section class="w-full py-16 lg:py-24 bg-surface" id="acces-ndogbong">
+<div class="max-w-[1200px] mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center gap-2 mb-12">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Plan &amp; Accès</span>
+<div class="relative inline-block">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+            Nous trouver &amp; Horaires
+          </h2>
+<svg class="w-full h-3 text-secondary mt-1" fill="none" preserveaspectratio="none" viewbox="0 0 160 10">
+<path d="M4 7C45 2 115 2 156 6" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          Facilement accessible à Ndogbong (fin goudron), avec stationnement et sécurité assurée.
+        </p>
+</div>
+<!-- Split Layout 2 Colonnes -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Gauche : Carte Placeholder -->
+<div class="lg:col-span-6 flex flex-col rounded-2xl overflow-hidden shadow-md bg-surface-container-lowest">
+<div class="w-full h-72 sm:h-80 bg-cover bg-center" data-location="Ndogbong, Douala, Cameroon" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCf6Hr5wAgZiHC9nr0AS4WkSnoJ1UgJjpVp1UTMNovrtxPbQI7slW3ymlS9qU2-WIBRa_aN-MAj7Ydm0k-yZAeUvUHxXpdcUywQNBf8gocOtFV0yAQjefaXgiZA0Hs3PDFkVEpgYcdEJeyrPq-uKp7KVFfOXkS4Fo7Sw8vDGwmuFQKkq9AbE48_vLx8vKwXeaaCEC_ZY8_KWoHrECFX19l5-PJCNdCY5yUT5JkEZgtM')"></div>
+<div class="p-6 flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[24px] shrink-0 mt-0.5">location_on</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">La Plazza Ndogbong</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fin goudron, axe principal Ndogbong, Douala, Cameroun</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1 text-xs">Repère : À 2 minutes du carrefour fin goudron, face aux résidences calmes.</p>
+</div>
+</div>
+<div class="pt-3">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-bold hover:bg-surface-variant transition-all" href="https://maps.google.com/?q=Ndogbong+Douala" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+<span>Itinéraire Google Maps</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Droite : Horaires & Contacts -->
+<div class="lg:col-span-6 flex flex-col justify-between rounded-2xl bg-surface-container-lowest shadow-md p-6 sm:p-8">
+<div>
+<div class="flex items-center justify-between pb-6">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Horaires d'ouverture</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+<span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+                Service continu
+              </span>
+</div>
+<!-- Table Horaires -->
+<div class="space-y-3 font-body-sm text-body-sm">
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<span class="font-medium text-on-surface">Lundi</span>
+<span class="font-bold text-secondary">Fermé</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl bg-primary-container/10">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">Mardi – Vendredi</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container text-[11px] font-bold">Aujourd'hui</span>
+</div>
+<span class="font-bold text-on-surface">10 h 00 – 22 h 00</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<span class="font-medium text-on-surface">Samedi</span>
+<span class="font-bold text-on-surface">10 h 00 – 23 h 00</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<span class="font-medium text-on-surface">Dimanche</span>
+<span class="font-bold text-on-surface">12 h 00 – 23 h 00</span>
+</div>
+</div>
+</div>
+<!-- Actions Rapides Téléphoniques -->
+<div class="pt-8">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider block mb-3">Contacts directs pour vos commandes</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<a class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container hover:bg-surface-variant transition-colors" href="tel:+237678184930">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">call</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[11px] text-on-surface-variant font-medium">Ligne principale</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">+237 678 18 49 30</span>
+</div>
+</a>
+<a class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container hover:bg-surface-variant transition-colors" href="https://wa.me/237656927470" rel="noopener noreferrer" target="_blank">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">forum</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[11px] text-on-surface-variant font-medium">WhatsApp commandes</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">+237 656 92 74 70</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><aside aria-label="Assistance rapide" class="fixed bottom-6 right-6 z-40"><a class="flex items-center gap-2 px-4 py-3 rounded-full bg-surface-container-lowest text-on-surface shadow-[0_10px_28px_rgba(31,20,16,0.16)] hover:bg-surface-container-low transition-all active:scale-[0.98]" href="https://wa.me/237678184930" rel="noopener noreferrer" target="_blank"><span class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">chat</span></span><span class="font-label-md text-label-md font-bold tracking-tight text-on-surface">WhatsApp</span></a></aside><footer class="w-full bg-secondary text-on-secondary py-space-xl"><div class="max-w-[1200px] mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="capture_logo.PNG" class="h-8 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AEtjO1WdrjdyeHm3u4WdG-Nkg3SRgEhRUM2D1s92zBUfUHhenF-1zk49KYbkbeiE2nKRu478BFWliN1VAyKI4j23UYodQUBgjcYEtpq9KuoRV_WmpA23BpiNdqZMQP5J4VQsDJbnjKUbUq6ngCnFACZ5DymcPby9kGIM8BzdzuKCKA780wUEKrb3ElZnNZok3PxQT5eYU9U7sznjhBjoSyk2CWo-o13ioD8-_e45HfW27FATSWIyPBCxXky2BZY"/><span class="font-headline-sm text-headline-sm text-on-secondary">La Plazza</span></div><p class="font-script-accent text-script-accent text-secondary-fixed">Choisissez le meilleur goût</p><p class="font-body-sm text-body-sm text-on-secondary/80 flex items-start gap-1.5 pt-space-xs"><span class="material-symbols-outlined text-[18px] shrink-0 text-secondary-fixed">location_on</span><span>Fin goudron, Ndogbong, Douala, Cameroun</span></p></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed font-bold">Horaires d'ouverture</span><ul class="font-body-sm text-body-sm space-y-1.5 text-on-secondary/80"><li class="flex justify-between"><span class="font-medium">Mar – Ven:</span><span>10h00 – 22h00</span></li><li class="flex justify-between"><span class="font-medium">Samedi:</span><span>10h00 – 23h00</span></li><li class="flex justify-between"><span class="font-medium">Dimanche:</span><span>12h00 – 23h00</span></li><li class="flex justify-between text-secondary-fixed"><span class="font-medium">Lundi:</span><span>Fermé</span></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed font-bold">Contact &amp; Commandes</span><div class="font-body-sm text-body-sm space-y-2 text-on-secondary/80"><a class="flex items-center gap-2 hover:text-secondary-fixed transition-colors" href="tel:+237678184930"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">phone_iphone</span><span>+237 678 18 49 30</span></a><a class="flex items-center gap-2 hover:text-secondary-fixed transition-colors" href="tel:+237656927470"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">call</span><span>+237 656 92 74 70</span></a><a class="flex items-center gap-2 hover:text-secondary-fixed transition-colors" href="https://wa.me/237678184930" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px] text-secondary-fixed">forum</span><span>WhatsApp Direct</span></a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-secondary-fixed font-bold">Paiements Acceptés</span><div class="flex flex-wrap gap-2 pt-1"><span class="px-2.5 py-1 rounded-full bg-on-secondary/10 font-label-sm text-label-sm text-on-secondary font-medium">Espèces</span><span class="px-2.5 py-1 rounded-full bg-on-secondary/10 font-label-sm text-label-sm text-on-secondary font-medium">MTN MoMo</span><span class="px-2.5 py-1 rounded-full bg-on-secondary/10 font-label-sm text-label-sm text-on-secondary font-medium">Orange Money</span></div><p class="font-body-sm text-body-sm text-on-secondary/70 text-xs pt-space-sm leading-relaxed">L'abus d'alcool est dangereux pour la santé. À consommer avec modération. Vente interdite aux mineurs.</p></div></div><div class="pt-space-md mt-space-md border-t border-on-secondary/15 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-secondary/75 font-body-sm text-body-sm"><p>© 2025 La Plazza. Tous droits réservés.</p><div class="flex items-center gap-space-lg"><a class="hover:text-secondary-fixed transition-colors" data-path="contact" href="#">Mentions légales</a><a class="hover:text-secondary-fixed transition-colors" data-path="contact" href="#">Politique de confidentialité</a></div></div></div></footer></body></html>
