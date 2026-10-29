@@ -207,3 +207,48 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+
+/* La Plazza hero photography: slow, restrained movement */
+.hero-food-backdrop {
+  position: absolute;
+  inset: -3%;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("https://images.pexels.com/photos/31372389/pexels-photo-31372389.jpeg?auto=compress&cs=tinysrgb&w=2000");
+  background-size: cover;
+  background-position: center 46%;
+  opacity: 0.16;
+  transform-origin: center;
+  animation: hero-backdrop-drift 32s ease-in-out infinite alternate;
+}
+
+.hero-food-wash {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(100deg, rgba(255,248,246,.97) 0%, rgba(255,241,236,.88) 48%, rgba(255,233,226,.72) 100%);
+}
+
+.hero-food-float {
+  animation: hero-food-float 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes hero-backdrop-drift {
+  from { transform: scale(1.02) translate3d(-0.5%, 0, 0); }
+  to { transform: scale(1.10) translate3d(0.5%, -1%, 0); }
+}
+
+@keyframes hero-food-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-1deg); }
+  50% { transform: translate3d(0, -12px, 0) rotate(1deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-food-backdrop,
+  .hero-food-float {
+    animation: none;
+  }
+}
