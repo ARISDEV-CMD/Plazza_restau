@@ -257,3 +257,79 @@
   background-position: center 48%;
   background-repeat: no-repeat;
 }
+
+
+/* Global La Plazza interaction and motion system */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+.plazza-page-transition {
+  transform-origin: top center;
+  backface-visibility: hidden;
+}
+
+.plazza-page-transition section,
+.plazza-page-transition article {
+  animation: plazza-section-enter 620ms cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.plazza-page-transition article:nth-child(2n) { animation-delay: 55ms; }
+.plazza-page-transition article:nth-child(3n) { animation-delay: 95ms; }
+.plazza-page-transition article:nth-child(4n) { animation-delay: 135ms; }
+
+@keyframes plazza-section-enter {
+  from { opacity: 0; transform: translate3d(0, 14px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+/* Consistent, subtle feedback on interactive elements */
+header button,
+footer button,
+main button,
+main a,
+aside a {
+  transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(.2, .8, .2, 1);
+}
+
+main button:active,
+header button:active,
+footer button:active,
+aside a:active {
+  transform: scale(.975);
+}
+
+main article {
+  transition: transform 260ms cubic-bezier(.2, .8, .2, 1), box-shadow 260ms ease, border-color 200ms ease;
+}
+
+main article:hover {
+  transform: translateY(-3px);
+}
+
+main .group img {
+  transition: transform 500ms cubic-bezier(.2, .8, .2, 1);
+}
+
+main .group:hover img {
+  transform: scale(1.035);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(232, 145, 26, .72);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
