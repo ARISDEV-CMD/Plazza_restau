@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 import { NavigationTab, MenuItem, CartItem, OrderMode } from './types';
 import { INITIAL_CART_ITEMS, RESTAURANT_INFO } from './data/menuData';
 import { Navbar } from './components/Navbar';
@@ -126,45 +127,42 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="w-full pt-20 bg-[#fff8f6] min-h-[calc(100vh-80px)] flex-grow">
-        {currentTab === 'accueil' && (
-          <HomeScreen
-            onNavigate={handleNavigate}
-            onAddToCart={handleAddToCart}
-          />
-        )}
-
-        {currentTab === 'menu' && (
-          <MenuScreen
-            cartItems={cartItems}
-            onAddToCart={handleAddToCart}
-            onUpdateCartItemQuantity={handleUpdateCartItemQuantity}
-            onNavigate={handleNavigate}
-            orderMode={orderMode}
-            onSetOrderMode={setOrderMode}
-          />
-        )}
-
-        {currentTab === 'commander' && (
-          <CheckoutScreen
-            cartItems={cartItems}
-            onNavigate={handleNavigate}
-            orderMode={orderMode}
-            onSetOrderMode={setOrderMode}
-            onClearCart={handleClearCart}
-          />
-        )}
-
-        {currentTab === 'reserver' && (
-          <ReservationScreen onNavigate={handleNavigate} />
-        )}
-
-        {currentTab === 'galerie' && (
-          <GalleryScreen onNavigate={handleNavigate} />
-        )}
-
-        {currentTab === 'contact' && (
-          <ContactScreen onNavigate={handleNavigate} />
-        )}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentTab}
+            className="plazza-page-transition w-full"
+            initial={{ opacity: 0, y: 18, filter: 'blur(4px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            exit={{ opacity: 0, y: -10, filter: 'blur(2px)' }}
+            transition={{ duration: 0.34, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {currentTab === 'accueil' && (
+              <HomeScreen onNavigate={handleNavigate} onAddToCart={handleAddToCart} />
+            )}
+            {currentTab === 'menu' && (
+              <MenuScreen
+                cartItems={cartItems}
+                onAddToCart={handleAddToCart}
+                onUpdateCartItemQuantity={handleUpdateCartItemQuantity}
+                onNavigate={handleNavigate}
+                orderMode={orderMode}
+                onSetOrderMode={setOrderMode}
+              />
+            )}
+            {currentTab === 'commander' && (
+              <CheckoutScreen
+                cartItems={cartItems}
+                onNavigate={handleNavigate}
+                orderMode={orderMode}
+                onSetOrderMode={setOrderMode}
+                onClearCart={handleClearCart}
+              />
+            )}
+            {currentTab === 'reserver' && <ReservationScreen onNavigate={handleNavigate} />}
+            {currentTab === 'galerie' && <GalleryScreen onNavigate={handleNavigate} />}
+            {currentTab === 'contact' && <ContactScreen onNavigate={handleNavigate} />}
+          </motion.div>
+        </AnimatePresence>
       </main>
 
       {/* Slide-over Cart Drawer */}
