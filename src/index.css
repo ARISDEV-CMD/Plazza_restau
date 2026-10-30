@@ -370,13 +370,13 @@ main .group:hover img {
 }
 
 .compose-step-card--chicken::before {
-  background-image: url("https://images.pexels.com/photos/ chicken-grilled-food/??");
+  background-image: url("https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=1200");
 }
 .compose-step-card--sides::before {
-  background-image: url("https://images.pexels.com/photos/ potato-fries-plantain-food/??");
+  background-image: url("https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1200");
 }
 .compose-step-card--drinks::before {
-  background-image: url("https://images.pexels.com/photos/ fresh-fruit-juice-drink/??");
+  background-image: url("https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=1200");
 }
 
 .compose-step-card:hover {
