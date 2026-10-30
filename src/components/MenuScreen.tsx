@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { Utensils, Drumstick, Wheat, GlassWater, CupSoda, Beer, Wine, Martini } from 'lucide-react';
 import { MenuItem, CartItem, MenuCategory, OrderMode, NavigationTab } from '../types';
 import { MENU_ITEMS, RESTAURANT_INFO } from '../data/menuData';
 import {
@@ -177,28 +178,32 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({
             {/* Category Horizontal Pills */}
             <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
               {[
-                { id: 'all', label: 'Tous', emoji: '🍽️' },
-                { id: 'poulet', label: 'Poulet (7)', emoji: '🍗' },
-                { id: 'accompagnements', label: 'Accompagnements (4)', emoji: '🍟' },
-                { id: 'naturelles', label: 'Boissons naturelles (7)', emoji: '🥤' },
-                { id: 'gazeuses', label: 'Sodas & Gazeuses (3)', emoji: '🫧' },
-                { id: 'bieres', label: 'Bières [18+] (3)', emoji: '🍺' },
-                { id: 'vins', label: 'Vins [18+] (3)', emoji: '🍷' },
-                { id: 'whiskies', label: 'Whiskies [18+] (4)', emoji: '🥃' }
-              ].map(cat => (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.id as any)}
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-label-md text-xs sm:text-sm whitespace-nowrap transition-all cursor-pointer ${
-                    activeCategory === cat.id
-                      ? 'bg-[#e8911a] text-[#573200] font-bold shadow-sm'
-                      : 'bg-[#fff1ec] text-[#241915] hover:bg-[#fae3dc]'
-                  }`}
-                >
-                  <span>{cat.emoji}</span>
-                  <span>{cat.label}</span>
-                </button>
-              ))}
+                { id: 'all', label: 'Tous', Icon: Utensils },
+                { id: 'poulet', label: 'Poulet (7)', Icon: Drumstick },
+                { id: 'accompagnements', label: 'Accompagnements (4)', Icon: Wheat },
+                { id: 'naturelles', label: 'Boissons naturelles (7)', Icon: GlassWater },
+                { id: 'gazeuses', label: 'Sodas & Gazeuses (3)', Icon: CupSoda },
+                { id: 'bieres', label: 'Bières [18+] (3)', Icon: Beer },
+                { id: 'vins', label: 'Vins [18+] (3)', Icon: Wine },
+                { id: 'whiskies', label: 'Whiskies [18+] (4)', Icon: Martini }
+              ].map(cat => {
+                const isActive = activeCategory === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCategory(cat.id as any)}
+                    aria-pressed={isActive}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full font-label-md text-xs sm:text-sm whitespace-nowrap transition-all duration-200 cursor-pointer border ${
+                      isActive
+                        ? 'bg-[#e8911a] text-[#573200] border-[#e8911a] font-bold shadow-sm'
+                        : 'bg-white/90 text-[#534435] border-[#f1dfd5] hover:bg-[#fff1ec] hover:border-[#e8911a]/50 hover:text-[#241915]'
+                    }`}
+                  >
+                    <cat.Icon size={17} strokeWidth={1.9} aria-hidden="true" />
+                    <span>{cat.label}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>
