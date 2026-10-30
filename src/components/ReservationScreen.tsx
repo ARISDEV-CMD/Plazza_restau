@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ClocheReveal } from './motion/effects';
 import { NavigationTab, ReservationData } from '../types';
 import { RESTAURANT_INFO } from '../data/menuData';
 
@@ -104,10 +105,10 @@ Merci de me confirmer la disponibilité !`;
           {/* LEFT COLUMN: INTERACTIVE FORM */}
           <section className="lg:col-span-7 flex flex-col gap-6">
             {isSubmitted && confirmedReservation ? (
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-[#ffe9e2] flex flex-col items-center text-center gap-5 animate-in zoom-in-95 duration-200">
-                <div className="w-16 h-16 rounded-full bg-[#e8911a]/20 text-[#895200] flex items-center justify-center">
-                  <span className="material-symbols-outlined text-[36px]">check_circle</span>
-                </div>
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-[#ffe9e2] flex flex-col items-center text-center gap-5 confirm-pop">
+                <ClocheReveal size={132}>
+                  <span className="material-symbols-outlined text-[34px]">check_circle</span>
+                </ClocheReveal>
                 <div>
                   <h3 className="font-headline-sm text-2xl font-bold text-[#241915]">
                     Demande enregistrée avec succès !

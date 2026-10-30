@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { AnimatePresence, motion, useAnimationControls } from 'motion/react';
 import { NavigationTab } from '../types';
 import { RESTAURANT_INFO } from '../data/menuData';
+import { CART_HIT_EVENT } from '../utils/flyToCart';
 
 interface NavbarProps {
   currentTab: NavigationTab;
@@ -9,6 +11,23 @@ interface NavbarProps {
   onOpenCart?: () => void;
 }
 
+const DESKTOP_LINKS: { tab: NavigationTab; label: string }[] = [
+  { tab: 'accueil', label: 'Accueil' },
+  { tab: 'menu', label: 'Menu' },
+  { tab: 'reserver', label: 'Réserver' },
+  { tab: 'galerie', label: 'Galerie' },
+  { tab: 'contact', label: 'Contact' },
+];
+
+const MOBILE_LINKS: { tab: NavigationTab; label: (count: number) => string }[] = [
+  { tab: 'accueil', label: () => 'Accueil' },
+  { tab: 'menu', label: () => 'Menu & Commande' },
+  { tab: 'commander', label: (count) => `Finaliser la commande (${count} articles)` },
+  { tab: 'reserver', label: () => 'Réserver une table' },
+  { tab: 'galerie', label: () => 'Galerie & Cadre' },
+  { tab: 'contact', label: () => 'Contact & Localisation' },
+];
+
 export const Navbar: React.FC<NavbarProps> = ({
   currentTab,
   onNavigate,
@@ -16,6 +35,29 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenCart
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const bagControls = useAnimationControls();
+
+  // L'en-tête se compacte légèrement quand on descend dans la page
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // Le sac « reçoit » le plat qui vient d'être lancé depuis le menu
+  useEffect(() => {
+    const bump = () => {
+      bagControls.start({
+        scale: [1, 1.28, 0.92, 1.06, 1],
+        rotate: [0, -14, 10, -4, 0],
+        transition: { duration: 0.6, ease: 'easeOut' },
+      });
+    };
+    window.addEventListener(CART_HIT_EVENT, bump);
+    return () => window.removeEventListener(CART_HIT_EVENT, bump);
+  }, [bagControls]);
 
   const handleNavClick = (tab: NavigationTab) => {
     onNavigate(tab);
@@ -24,10 +66,25 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-[#fff8f6]/95 backdrop-blur-md shadow-[0_4px_16px_rgba(31,20,16,0.06)] border-b border-[#ffe9e2]">
-      <div className="h-20 max-w-[1200px] mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
+    <motion.header
+      className="fixed top-0 inset-x-0 z-50 bg-[#fff8f6]/95 backdrop-blur-md border-b border-[#ffe9e2]"
+      initial={{ y: -90, opacity: 0 }}
+      animate={{
+        y: 0,
+        opacity: 1,
+        boxShadow: scrolled
+          ? '0 8px 28px rgba(31,20,16,0.12)'
+          : '0 4px 16px rgba(31,20,16,0.06)',
+      }}
+      transition={{ type: 'spring', stiffness: 220, damping: 26 }}
+    >
+      <div
+        className={`max-w-[1200px] mx-auto px-4 sm:px-6 flex items-center justify-between gap-4 transition-[height] duration-300 ease-out ${
+          scrolled ? 'h-[68px]' : 'h-20'
+        }`}
+      >
         {/* Brand Logo & Name */}
-        <div 
+        <div
           onClick={() => handleNavClick('accueil')}
           className="flex items-center gap-3 shrink-0 cursor-pointer group"
           role="button"
@@ -37,7 +94,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         >
           <img
             alt="Logo La Plazza"
-            className="h-9 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3"
             src={RESTAURANT_INFO.logoUrl}
             onError={(e) => {
               (e.target as HTMLElement).style.display = 'none';
@@ -65,56 +122,27 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-6" aria-label="Navigation principale">
-          <button
-            onClick={() => handleNavClick('accueil')}
-            className={`transition-colors font-label-md text-sm ${
-              currentTab === 'accueil'
-                ? 'text-[#895200] font-bold border-b-2 border-[#895200] pb-1'
-                : 'text-[#534435] hover:text-[#241915]'
-            }`}
-          >
-            Accueil
-          </button>
-          <button
-            onClick={() => handleNavClick('menu')}
-            className={`transition-colors font-label-md text-sm ${
-              currentTab === 'menu'
-                ? 'text-[#895200] font-bold border-b-2 border-[#895200] pb-1'
-                : 'text-[#534435] hover:text-[#241915]'
-            }`}
-          >
-            Menu
-          </button>
-          <button
-            onClick={() => handleNavClick('reserver')}
-            className={`transition-colors font-label-md text-sm ${
-              currentTab === 'reserver'
-                ? 'text-[#895200] font-bold border-b-2 border-[#895200] pb-1'
-                : 'text-[#534435] hover:text-[#241915]'
-            }`}
-          >
-            Réserver
-          </button>
-          <button
-            onClick={() => handleNavClick('galerie')}
-            className={`transition-colors font-label-md text-sm ${
-              currentTab === 'galerie'
-                ? 'text-[#895200] font-bold border-b-2 border-[#895200] pb-1'
-                : 'text-[#534435] hover:text-[#241915]'
-            }`}
-          >
-            Galerie
-          </button>
-          <button
-            onClick={() => handleNavClick('contact')}
-            className={`transition-colors font-label-md text-sm ${
-              currentTab === 'contact'
-                ? 'text-[#895200] font-bold border-b-2 border-[#895200] pb-1'
-                : 'text-[#534435] hover:text-[#241915]'
-            }`}
-          >
-            Contact
-          </button>
+          {DESKTOP_LINKS.map(({ tab, label }) => {
+            const active = currentTab === tab;
+            return (
+              <button
+                key={tab}
+                onClick={() => handleNavClick(tab)}
+                className={`relative pb-1 font-label-md text-sm transition-colors ${
+                  active ? 'text-[#895200] font-bold' : 'text-[#534435] hover:text-[#241915]'
+                }`}
+              >
+                {label}
+                {active && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    className="absolute left-0 right-0 -bottom-0.5 h-[2px] rounded-full bg-[#895200]"
+                    transition={{ type: 'spring', stiffness: 420, damping: 32 }}
+                  />
+                )}
+              </button>
+            );
+          })}
         </nav>
 
         {/* Action Controls & Mobile Menu Toggle */}
@@ -131,13 +159,29 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button
             aria-label={`Panier (${cartCount} articles)`}
             onClick={onOpenCart || (() => handleNavClick('commander'))}
+            data-cart-target
             className="relative p-2 rounded-full text-[#241915] hover:bg-[#fae3dc] transition-colors flex items-center justify-center cursor-pointer"
             type="button"
           >
-            <span className="material-symbols-outlined text-[24px]">shopping_bag</span>
-            <span className="absolute top-1 right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-[#e8911a] text-[#573200] font-label-sm text-[10px] leading-none font-bold">
-              {cartCount}
-            </span>
+            <motion.span
+              className="material-symbols-outlined text-[24px] block"
+              animate={bagControls}
+              style={{ transformOrigin: '50% 20%' }}
+            >
+              shopping_bag
+            </motion.span>
+            <AnimatePresence mode="popLayout" initial={false}>
+              <motion.span
+                key={cartCount}
+                className="absolute top-1 right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-[#e8911a] text-[#573200] font-label-sm text-[10px] leading-none font-bold"
+                initial={{ scale: 0.3, y: -8, opacity: 0 }}
+                animate={{ scale: 1, y: 0, opacity: 1 }}
+                exit={{ scale: 0.3, y: 8, opacity: 0 }}
+                transition={{ type: 'spring', stiffness: 520, damping: 20 }}
+              >
+                {cartCount}
+              </motion.span>
+            </AnimatePresence>
           </button>
 
           {/* Commander CTA button */}
@@ -153,87 +197,80 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2 rounded-lg text-[#241915] hover:bg-[#fae3dc] transition-colors flex items-center justify-center"
             aria-label="Menu de navigation"
+            aria-expanded={mobileMenuOpen}
             type="button"
           >
-            <span className="material-symbols-outlined text-[26px]">
-              {mobileMenuOpen ? 'close' : 'menu'}
-            </span>
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.span
+                key={mobileMenuOpen ? 'close' : 'menu'}
+                className="material-symbols-outlined text-[26px] block"
+                initial={{ rotate: -90, opacity: 0, scale: 0.6 }}
+                animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                exit={{ rotate: 90, opacity: 0, scale: 0.6 }}
+                transition={{ duration: 0.16 }}
+              >
+                {mobileMenuOpen ? 'close' : 'menu'}
+              </motion.span>
+            </AnimatePresence>
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer Navigation */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#fff8f6] border-b border-[#ffe9e2] px-6 py-4 shadow-xl flex flex-col gap-3 animate-in fade-in slide-in-from-top-4 duration-200">
-          <button
-            onClick={() => handleNavClick('accueil')}
-            className={`text-left py-2 px-3 rounded-lg font-label-md text-base ${
-              currentTab === 'accueil' ? 'bg-[#ffe9e2] text-[#895200] font-bold' : 'text-[#241915]'
-            }`}
+      <AnimatePresence initial={false}>
+        {mobileMenuOpen && (
+          <motion.div
+            key="mobile-nav"
+            className="lg:hidden overflow-hidden bg-[#fff8f6] border-b border-[#ffe9e2] shadow-xl"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
           >
-            Accueil
-          </button>
-          <button
-            onClick={() => handleNavClick('menu')}
-            className={`text-left py-2 px-3 rounded-lg font-label-md text-base ${
-              currentTab === 'menu' ? 'bg-[#ffe9e2] text-[#895200] font-bold' : 'text-[#241915]'
-            }`}
-          >
-            Menu & Commande
-          </button>
-          <button
-            onClick={() => handleNavClick('commander')}
-            className={`text-left py-2 px-3 rounded-lg font-label-md text-base ${
-              currentTab === 'commander' ? 'bg-[#ffe9e2] text-[#895200] font-bold' : 'text-[#241915]'
-            }`}
-          >
-            Finaliser la commande ({cartCount} articles)
-          </button>
-          <button
-            onClick={() => handleNavClick('reserver')}
-            className={`text-left py-2 px-3 rounded-lg font-label-md text-base ${
-              currentTab === 'reserver' ? 'bg-[#ffe9e2] text-[#895200] font-bold' : 'text-[#241915]'
-            }`}
-          >
-            Réserver une table
-          </button>
-          <button
-            onClick={() => handleNavClick('galerie')}
-            className={`text-left py-2 px-3 rounded-lg font-label-md text-base ${
-              currentTab === 'galerie' ? 'bg-[#ffe9e2] text-[#895200] font-bold' : 'text-[#241915]'
-            }`}
-          >
-            Galerie & Cadre
-          </button>
-          <button
-            onClick={() => handleNavClick('contact')}
-            className={`text-left py-2 px-3 rounded-lg font-label-md text-base ${
-              currentTab === 'contact' ? 'bg-[#ffe9e2] text-[#895200] font-bold' : 'text-[#241915]'
-            }`}
-          >
-            Contact & Localisation
-          </button>
+            <motion.div
+              className="px-6 py-4 flex flex-col gap-3"
+              initial="hidden"
+              animate="shown"
+              variants={{ hidden: {}, shown: { transition: { staggerChildren: 0.05, delayChildren: 0.08 } } }}
+            >
+              {MOBILE_LINKS.map(({ tab, label }) => (
+                <motion.button
+                  key={tab}
+                  variants={{ hidden: { opacity: 0, x: -18 }, shown: { opacity: 1, x: 0 } }}
+                  onClick={() => handleNavClick(tab)}
+                  className={`text-left py-2 px-3 rounded-lg font-label-md text-base ${
+                    currentTab === tab ? 'bg-[#ffe9e2] text-[#895200] font-bold' : 'text-[#241915]'
+                  }`}
+                >
+                  {label(cartCount)}
+                </motion.button>
+              ))}
 
-          <div className="pt-3 border-t border-[#ffe9e2] flex items-center justify-between">
-            <a
-              href={`tel:${RESTAURANT_INFO.phonePrimary}`}
-              className="flex items-center gap-1.5 text-xs text-[#895200] font-bold"
-            >
-              <span className="material-symbols-outlined text-[16px]">call</span>
-              <span>{RESTAURANT_INFO.phonePrimary}</span>
-            </a>
-            <a
-              href={RESTAURANT_INFO.whatsappDirect}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 text-xs text-[#25D366] font-bold"
-            >
-              <span className="material-symbols-outlined text-[16px]">chat</span>
-              <span>WhatsApp Direct</span>
-            </a>
-          </div>
-        </div>
-      )}
-    </header>
+              <motion.div
+                variants={{ hidden: { opacity: 0 }, shown: { opacity: 1 } }}
+                className="pt-3 border-t border-[#ffe9e2] flex items-center justify-between"
+              >
+                <a
+                  href={`tel:${RESTAURANT_INFO.phonePrimary}`}
+                  className="flex items-center gap-1.5 text-xs text-[#895200] font-bold"
+                >
+                  <span className="material-symbols-outlined text-[16px]">call</span>
+                  <span>{RESTAURANT_INFO.phonePrimary}</span>
+                </a>
+                <a
+                  href={RESTAURANT_INFO.whatsappDirect}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-xs text-[#25D366] font-bold"
+                >
+                  <span className="material-symbols-outlined text-[16px]">chat</span>
+                  <span>WhatsApp Direct</span>
+                </a>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 };

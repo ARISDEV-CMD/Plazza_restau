@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ClocheReveal } from './motion/effects';
 import { CartItem, OrderMode, PaymentMethod, DeliveryTiming, NavigationTab } from '../types';
 import { DISTRICT_LIST, RESTAURANT_INFO } from '../data/menuData';
 import {
@@ -228,10 +229,10 @@ export const CheckoutScreen: React.FC<CheckoutScreenProps> = ({
 
         {/* ORDER CONFIRMATION VIEW (When user clicks Confirmer et commander) */}
         {orderSubmitted ? (
-          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-10 border border-[#ffe9e2] max-w-3xl mx-auto flex flex-col items-center text-center gap-6 animate-in zoom-in-95 duration-300">
-            <div className="w-20 h-20 rounded-full bg-[#e8911a]/20 text-[#895200] flex items-center justify-center">
-              <span className="material-symbols-outlined text-[44px]">check_circle</span>
-            </div>
+          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-10 border border-[#ffe9e2] max-w-3xl mx-auto flex flex-col items-center text-center gap-6 confirm-pop">
+            <ClocheReveal size={150}>
+              <span className="material-symbols-outlined text-[34px]">check_circle</span>
+            </ClocheReveal>
 
             <div>
               <span className="inline-block px-3 py-1 rounded-full bg-[#ffdad7] text-[#410004] font-label-sm text-xs font-bold uppercase tracking-wider mb-2">

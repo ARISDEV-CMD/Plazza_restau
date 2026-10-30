@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+import { useState, useEffect, useRef } from 'react';
+import { AnimatePresence, MotionConfig, motion } from 'motion/react';
 import { NavigationTab, MenuItem, CartItem, OrderMode } from './types';
 import { INITIAL_CART_ITEMS, RESTAURANT_INFO } from './data/menuData';
 import { Navbar } from './components/Navbar';
@@ -12,6 +12,9 @@ import { GalleryScreen } from './components/GalleryScreen';
 import { ContactScreen } from './components/ContactScreen';
 import { CartDrawer } from './components/CartDrawer';
 import { calculateItemCount } from './utils/orderCalculator';
+import { ScrollProgress, Splash } from './components/motion/effects';
+import { useScrollReveal } from './hooks/useScrollReveal';
+import { flyToCart, trackClickOrigin } from './utils/flyToCart';
 
 export default function App() {
   // Query param checking (?tab=... or ?autostart=1)
@@ -33,6 +36,10 @@ export default function App() {
   const [isCartDrawerOpen, setIsCartDrawerOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
+  // Animations globales : apparition au scroll + origine du clic « Ajouter »
+  useScrollReveal();
+  useEffect(() => trackClickOrigin(), []);
+
   // Sync tab with URL hash or state
   useEffect(() => {
     const handleHash = () => {
@@ -51,9 +58,11 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const toastTimer = useRef<number | undefined>(undefined);
   const showToast = (msg: string) => {
     setToastMessage(msg);
-    setTimeout(() => {
+    window.clearTimeout(toastTimer.current);
+    toastTimer.current = window.setTimeout(() => {
       setToastMessage(null);
     }, 2500);
   };
@@ -84,6 +93,7 @@ export default function App() {
       ];
     });
 
+    flyToCart(item.image);
     showToast(`✓ "${item.name}" ajouté au panier !`);
   };
 
@@ -108,14 +118,42 @@ export default function App() {
   const totalCartCount = calculateItemCount(cartItems);
 
   return (
+    <MotionConfig reducedMotion="user">
     <div className="min-h-screen bg-[#fff8f6] font-['Inter',sans-serif] text-[#241915] flex flex-col selection:bg-[#e8911a] selection:text-[#573200]">
+      <Splash />
+      <ScrollProgress />
+
       {/* Toast Notification */}
-      {toastMessage && (
-        <div className="fixed top-24 right-4 sm:right-8 z-50 bg-[#895200] text-white px-5 py-3 rounded-xl shadow-xl flex items-center gap-2.5 animate-in slide-in-from-top-2 duration-200">
-          <span className="material-symbols-outlined text-[20px] text-[#ffb86a]">check_circle</span>
-          <span className="font-label-md text-xs sm:text-sm font-semibold">{toastMessage}</span>
-        </div>
-      )}
+      <AnimatePresence>
+        {toastMessage && (
+          <motion.div
+            key={toastMessage}
+            role="status"
+            className="fixed top-24 right-4 sm:right-8 z-50 bg-[#895200] text-white pl-5 pr-6 py-3 rounded-xl shadow-xl flex items-center gap-2.5 overflow-hidden"
+            initial={{ opacity: 0, x: 60, scale: 0.92 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: 40, scale: 0.95, transition: { duration: 0.22 } }}
+            transition={{ type: 'spring', stiffness: 420, damping: 28 }}
+          >
+            <motion.span
+              className="material-symbols-outlined text-[20px] text-[#ffb86a]"
+              initial={{ scale: 0, rotate: -90 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ delay: 0.1, type: 'spring', stiffness: 400, damping: 14 }}
+            >
+              check_circle
+            </motion.span>
+            <span className="font-label-md text-xs sm:text-sm font-semibold">{toastMessage}</span>
+            <motion.span
+              aria-hidden="true"
+              className="absolute left-0 bottom-0 h-[3px] w-full origin-left bg-[#ffb86a]"
+              initial={{ scaleX: 1 }}
+              animate={{ scaleX: 0 }}
+              transition={{ duration: 2.5, ease: 'linear' }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Main Navigation Header */}
       <Navbar
@@ -131,10 +169,10 @@ export default function App() {
           <motion.div
             key={currentTab}
             className="plazza-page-transition w-full"
-            initial={{ opacity: 0, y: 18, filter: 'blur(4px)' }}
-            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-            exit={{ opacity: 0, y: -10, filter: 'blur(2px)' }}
-            transition={{ duration: 0.34, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
           >
             {currentTab === 'accueil' && (
               <HomeScreen onNavigate={handleNavigate} onAddToCart={handleAddToCart} />
@@ -176,24 +214,32 @@ export default function App() {
       />
 
       {/* Floating Fast Help Widget: WhatsApp direct (from original designs) */}
-      <aside aria-label="Assistance rapide" className="fixed bottom-6 right-6 z-40">
+      <motion.aside
+        aria-label="Assistance rapide"
+        className="fixed bottom-6 right-6 z-40"
+        initial={{ opacity: 0, scale: 0.4, y: 40 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ delay: 2.6, type: 'spring', stiffness: 260, damping: 16 }}
+        whileHover={{ y: -3 }}
+      >
         <a
           className="flex items-center gap-2 px-4 py-3 rounded-full bg-white text-[#241915] shadow-[0_10px_28px_rgba(31,20,16,0.16)] hover:bg-[#fff1ec] transition-all active:scale-[0.98] border border-[#ffe9e2]"
           href={RESTAURANT_INFO.whatsappDirect}
           rel="noopener noreferrer"
           target="_blank"
         >
-          <span className="w-7 h-7 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-xs">
+          <span className="wa-pulse w-7 h-7 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-xs">
             <span className="material-symbols-outlined text-[18px]">chat</span>
           </span>
           <span className="font-label-md text-xs sm:text-sm font-bold tracking-tight text-[#241915]">
             WhatsApp
           </span>
         </a>
-      </aside>
+      </motion.aside>
 
       {/* Footer */}
       <Footer onNavigate={handleNavigate} />
     </div>
+    </MotionConfig>
   );
 }

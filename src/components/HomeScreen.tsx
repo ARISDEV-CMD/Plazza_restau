@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuItem, NavigationTab } from '../types';
 import { RESTAURANT_INFO, MENU_ITEMS } from '../data/menuData';
 import { formatFCFA } from '../utils/orderCalculator';
+import { Embers, Parallax, Steam } from './motion/effects';
 
 interface HomeScreenProps {
   onNavigate: (tab: NavigationTab) => void;
@@ -41,7 +42,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Colonne Gauche */}
-            <div className="lg:col-span-7 flex flex-col items-start gap-6 z-10">
+            <div className="hero-stagger lg:col-span-7 flex flex-col items-start gap-6 z-10">
               {/* Google Review Pill */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white shadow-sm border border-[#ffe9e2]">
                 <div className="flex items-center text-[#e8911a]">
@@ -124,12 +125,14 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             </div>
 
             {/* Colonne Droite: Photo Hero avec Ring Visuel */}
-            <div className="lg:col-span-5 relative flex justify-center items-center">
+            <Parallax distance={56} className="lg:col-span-5 relative flex justify-center items-center">
               {/* Concentric Ring Backdrop */}
               <div className="absolute h-[340px] w-[340px] sm:h-[420px] sm:w-[420px] rounded-full bg-[#f4ded7] animate-pulse opacity-60"></div>
               <div className="absolute h-[300px] w-[300px] sm:h-[380px] sm:w-[380px] rounded-full bg-[#e8911a]/15"></div>
 
               {/* Circular Hero Plate */}
+              <div className="plate-serve relative">
+              <Steam className="left-[8%] right-[8%] top-[6%] h-[150px] z-10" />
               <div className="hero-food-float relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] rounded-full overflow-hidden shadow-2xl bg-[#fff1ec] flex items-center justify-center p-2 border-4 border-white">
                 <img
                   className="w-full h-full object-cover rounded-full transition-transform duration-700 hover:scale-105"
@@ -137,9 +140,10 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                   src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Broasted_Chicken_and_Rice%2C.jpg"
                 />
               </div>
+              </div>
 
               {/* Badge Flottant Prix */}
-              <div className="absolute -bottom-2 left-2 sm:left-6 px-4 sm:px-5 py-3 rounded-2xl bg-white shadow-xl flex items-center gap-3 border border-[#ffe9e2]">
+              <div style={{ ['--pop-delay' as string]: '1.5s' }} className="pop-in absolute -bottom-2 left-2 sm:left-6 px-4 sm:px-5 py-3 rounded-2xl bg-white shadow-xl flex items-center gap-3 border border-[#ffe9e2]">
                 <div className="w-10 h-10 rounded-full bg-[#e8911a]/20 flex items-center justify-center text-[#e8911a] font-bold">
                   <span className="material-symbols-outlined text-[20px]">restaurant</span>
                 </div>
@@ -150,11 +154,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               </div>
 
               {/* Pastille Fait Maison */}
-              <div className="absolute top-2 right-2 sm:right-4 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full bg-[#b52529] text-white shadow-lg flex items-center gap-1.5">
+              <div style={{ ['--pop-delay' as string]: '1.85s' }} className="pop-in absolute top-2 right-2 sm:right-4 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full bg-[#b52529] text-white shadow-lg flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-[16px] text-[#ffdad7]">favorite</span>
                 <span className="font-label-sm text-xs font-bold tracking-tight">100% Fait maison</span>
               </div>
-            </div>
+            </Parallax>
           </div>
         </div>
       </section>
@@ -536,6 +540,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
       {/* 7. BANDEAU CTA BOURGOGNE (RÉSERVATION) */}
       <section className="w-full bg-[#b52529] text-white py-16 relative overflow-hidden">
+        <Embers count={22} />
         <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-96 opacity-15">
           <svg className="h-full w-full" fill="none" stroke="currentColor" viewBox="0 0 300 300">
             <circle cx="200" cy="150" r="140" strokeWidth="2"></circle>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 import { NavigationTab } from '../types';
 import { RESTAURANT_INFO } from '../data/menuData';
 
@@ -77,7 +78,7 @@ export const GalleryScreen: React.FC<GalleryScreenProps> = ({ onNavigate }) => {
           <div className="flex items-center justify-center gap-2 mt-6 flex-wrap">
             <button
               onClick={() => setActiveFilter('all')}
-              className={`px-4 py-1.5 rounded-full font-label-md text-xs font-bold transition-all cursor-pointer ${
+              className={`px-4 py-1.5 rounded-full font-label-md text-xs font-bold transition-all duration-300 cursor-pointer active:scale-95 ${
                 activeFilter === 'all' ? 'bg-[#e8911a] text-[#573200] shadow-sm' : 'bg-[#fff1ec] text-[#241915]'
               }`}
             >
@@ -85,7 +86,7 @@ export const GalleryScreen: React.FC<GalleryScreenProps> = ({ onNavigate }) => {
             </button>
             <button
               onClick={() => setActiveFilter('plats')}
-              className={`px-4 py-1.5 rounded-full font-label-md text-xs font-bold transition-all cursor-pointer ${
+              className={`px-4 py-1.5 rounded-full font-label-md text-xs font-bold transition-all duration-300 cursor-pointer active:scale-95 ${
                 activeFilter === 'plats' ? 'bg-[#e8911a] text-[#573200] shadow-sm' : 'bg-[#fff1ec] text-[#241915]'
               }`}
             >
@@ -93,7 +94,7 @@ export const GalleryScreen: React.FC<GalleryScreenProps> = ({ onNavigate }) => {
             </button>
             <button
               onClick={() => setActiveFilter('ambiance')}
-              className={`px-4 py-1.5 rounded-full font-label-md text-xs font-bold transition-all cursor-pointer ${
+              className={`px-4 py-1.5 rounded-full font-label-md text-xs font-bold transition-all duration-300 cursor-pointer active:scale-95 ${
                 activeFilter === 'ambiance' ? 'bg-[#e8911a] text-[#573200] shadow-sm' : 'bg-[#fff1ec] text-[#241915]'
               }`}
             >
@@ -101,7 +102,7 @@ export const GalleryScreen: React.FC<GalleryScreenProps> = ({ onNavigate }) => {
             </button>
             <button
               onClick={() => setActiveFilter('cuisine')}
-              className={`px-4 py-1.5 rounded-full font-label-md text-xs font-bold transition-all cursor-pointer ${
+              className={`px-4 py-1.5 rounded-full font-label-md text-xs font-bold transition-all duration-300 cursor-pointer active:scale-95 ${
                 activeFilter === 'cuisine' ? 'bg-[#e8911a] text-[#573200] shadow-sm' : 'bg-[#fff1ec] text-[#241915]'
               }`}
             >
@@ -111,11 +112,20 @@ export const GalleryScreen: React.FC<GalleryScreenProps> = ({ onNavigate }) => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map(item => (
-            <div
+        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <AnimatePresence mode="popLayout" initial={false}>
+          {filtered.map((item, i) => (
+            <motion.div
               key={item.id}
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-[#ffe9e2] flex flex-col"
+              data-no-reveal
+              layout
+              initial={{ opacity: 0, y: 36, scale: 0.94 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: '0px 0px -8% 0px' }}
+              exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
+              transition={{ type: 'spring', stiffness: 260, damping: 28, delay: (i % 3) * 0.07 }}
+              whileHover={{ y: -6 }}
+              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 border border-[#ffe9e2] flex flex-col"
             >
               <div className="h-64 overflow-hidden relative bg-[#ffe9e2]">
                 <img
@@ -146,9 +156,10 @@ export const GalleryScreen: React.FC<GalleryScreenProps> = ({ onNavigate }) => {
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+          </AnimatePresence>
+        </motion.div>
       </div>
     </div>
   );
