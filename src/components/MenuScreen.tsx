@@ -138,9 +138,10 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({
                   </button>
                 )}
               </div>
+            </div>
 
-              {/* Main category navigation with manual horizontal controls */}
-            <div className="relative flex items-center gap-2">
+            {/* Main category navigation with manual horizontal controls */}
+            <div className="relative flex w-full items-center gap-2">
               <button
                 type="button"
                 aria-label="Défiler les catégories vers la gauche"
@@ -195,12 +196,12 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({
             </div>
 
             {/* Expandable secondary filters, displayed below the main categories */}
-            <div className="border-t border-[#ffe9e2] pt-2">
+            <div className="w-full border-t border-[#ffe9e2] pt-2">
               <button
                 type="button"
                 onClick={() => setShowSubcategories(value => !value)}
                 aria-expanded={showSubcategories}
-                className="flex items-center gap-2 mx-auto px-3 py-1.5 rounded-full text-xs font-semibold text-[#895200] hover:bg-[#fae3dc] transition-colors"
+                className="flex items-center gap-2 mx-auto px-4 py-2 rounded-full text-xs font-bold text-[#895200] bg-white border border-[#f1dfd5] shadow-sm hover:bg-[#fae3dc] transition-colors"
               >
                 <span>{showSubcategories ? 'Masquer les filtres' : 'Plus de filtres'}</span>
                 <ChevronDown size={15} className={`transition-transform duration-200 ${showSubcategories ? 'rotate-180' : ''}`} />
