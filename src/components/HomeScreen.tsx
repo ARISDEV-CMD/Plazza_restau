@@ -318,7 +318,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           {/* 3 Steps Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             {/* Step 1 */}
-            <div className="flex flex-col items-start p-8 rounded-2xl bg-white shadow-md relative border border-[#ffe9e2]">
+            <div className="compose-step-card compose-step-card--chicken flex flex-col items-start p-8 rounded-2xl shadow-md relative border border-[#ffe9e2]">
               <div className="w-12 h-12 rounded-full bg-[#e8911a] text-[#573200] font-headline-sm text-lg font-bold flex items-center justify-center mb-6">
                 1
               </div>
@@ -339,7 +339,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             </div>
 
             {/* Step 2 */}
-            <div className="flex flex-col items-start p-8 rounded-2xl bg-white shadow-md relative border border-[#ffe9e2]">
+            <div className="compose-step-card compose-step-card--sides flex flex-col items-start p-8 rounded-2xl shadow-md relative border border-[#ffe9e2]">
               <div className="w-12 h-12 rounded-full bg-[#e8911a] text-[#573200] font-headline-sm text-lg font-bold flex items-center justify-center mb-6">
                 2
               </div>
@@ -361,7 +361,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             </div>
 
             {/* Step 3 */}
-            <div className="flex flex-col items-start p-8 rounded-2xl bg-white shadow-md relative border border-[#ffe9e2]">
+            <div className="compose-step-card compose-step-card--drinks flex flex-col items-start p-8 rounded-2xl shadow-md relative border border-[#ffe9e2]">
               <div className="w-12 h-12 rounded-full bg-[#e8911a] text-[#573200] font-headline-sm text-lg font-bold flex items-center justify-center mb-6">
                 3
               </div>
