@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { Utensils, Drumstick, Wheat, GlassWater, CupSoda, Beer, Wine, Martini } from 'lucide-react';
+import React, { useState, useMemo, useRef } from 'react';
+import { Utensils, Drumstick, Wheat, GlassWater, CupSoda, Beer, Wine, Martini, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { MenuItem, CartItem, MenuCategory, OrderMode, NavigationTab } from '../types';
 import { MENU_ITEMS, RESTAURANT_INFO } from '../data/menuData';
 import {
@@ -30,6 +30,8 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTag, setSelectedTag] = useState<'all' | 'new' | 'popular' | 'special'>('all');
   const [activeCategory, setActiveCategory] = useState<MenuCategory | 'all'>('all');
+  const [showSubcategories, setShowSubcategories] = useState(false);
+  const categoryScrollerRef = useRef<HTMLDivElement>(null);
 
   // Filtered items
   const filteredItems = useMemo(() => {
@@ -137,73 +139,101 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({
                 )}
               </div>
 
-              {/* Tag Filters */}
-              <div className="flex items-center gap-2 shrink-0 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 no-scrollbar">
-                <button
-                  onClick={() => setSelectedTag('all')}
-                  className={`px-3.5 py-1.5 rounded-full font-label-sm text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
-                    selectedTag === 'all'
-                      ? 'bg-[#e8911a] text-[#573200] shadow-sm'
-                      : 'bg-[#fae3dc] text-[#534435] hover:text-[#241915]'
-                  }`}
-                  type="button"
-                >
-                  Tout afficher
-                </button>
-                <button
-                  onClick={() => setSelectedTag('popular')}
-                  className={`px-3.5 py-1.5 rounded-full font-label-sm text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
-                    selectedTag === 'popular'
-                      ? 'bg-[#e8911a] text-[#573200] shadow-sm'
-                      : 'bg-[#fae3dc] text-[#534435] hover:text-[#241915]'
-                  }`}
-                  type="button"
-                >
-                  ⭐ Populaires
-                </button>
-                <button
-                  onClick={() => setSelectedTag('special')}
-                  className={`px-3.5 py-1.5 rounded-full font-label-sm text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
-                    selectedTag === 'special'
-                      ? 'bg-[#e8911a] text-[#573200] shadow-sm'
-                      : 'bg-[#fae3dc] text-[#534435] hover:text-[#241915]'
-                  }`}
-                  type="button"
-                >
-                  🎁 Formule Spéciale
-                </button>
+              {/* Main category navigation with manual horizontal controls */}
+            <div className="relative flex items-center gap-2">
+              <button
+                type="button"
+                aria-label="Défiler les catégories vers la gauche"
+                onClick={() => categoryScrollerRef.current?.scrollBy({ left: -260, behavior: 'smooth' })}
+                className="shrink-0 w-9 h-9 rounded-full bg-white border border-[#f1dfd5] text-[#895200] shadow-sm hover:bg-[#fff1ec] flex items-center justify-center"
+              >
+                <ChevronLeft size={19} />
+              </button>
+
+              <div
+                ref={categoryScrollerRef}
+                className="flex-1 min-w-0 flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1"
+                style={{ scrollbarWidth: 'none' }}
+              >
+                {[
+                  { id: 'all', label: 'Tous', Icon: Utensils },
+                  { id: 'poulet', label: 'Poulet (7)', Icon: Drumstick },
+                  { id: 'accompagnements', label: 'Accompagnements (4)', Icon: Wheat },
+                  { id: 'naturelles', label: 'Boissons naturelles (7)', Icon: GlassWater },
+                  { id: 'gazeuses', label: 'Sodas & Gazeuses (3)', Icon: CupSoda },
+                  { id: 'bieres', label: 'Bières [18+] (3)', Icon: Beer },
+                  { id: 'vins', label: 'Vins [18+] (3)', Icon: Wine },
+                  { id: 'whiskies', label: 'Whiskies [18+] (4)', Icon: Martini }
+                ].map(cat => {
+                  const isActive = activeCategory === cat.id;
+                  return (
+                    <button
+                      key={cat.id}
+                      onClick={() => setActiveCategory(cat.id as any)}
+                      aria-pressed={isActive}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-full font-label-md text-xs sm:text-sm whitespace-nowrap transition-all duration-200 cursor-pointer border ${
+                        isActive
+                          ? 'bg-[#e8911a] text-[#573200] border-[#e8911a] font-bold shadow-sm'
+                          : 'bg-white/90 text-[#534435] border-[#f1dfd5] hover:bg-[#fff1ec] hover:border-[#e8911a]/50 hover:text-[#241915]'
+                      }`}
+                    >
+                      <cat.Icon size={17} strokeWidth={1.9} aria-hidden="true" />
+                      <span>{cat.label}</span>
+                    </button>
+                  );
+                })}
               </div>
+
+              <button
+                type="button"
+                aria-label="Défiler les catégories vers la droite"
+                onClick={() => categoryScrollerRef.current?.scrollBy({ left: 260, behavior: 'smooth' })}
+                className="shrink-0 w-9 h-9 rounded-full bg-white border border-[#f1dfd5] text-[#895200] shadow-sm hover:bg-[#fff1ec] flex items-center justify-center"
+              >
+                <ChevronRight size={19} />
+              </button>
             </div>
 
-            {/* Category Horizontal Pills */}
-            <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
-              {[
-                { id: 'all', label: 'Tous', Icon: Utensils },
-                { id: 'poulet', label: 'Poulet (7)', Icon: Drumstick },
-                { id: 'accompagnements', label: 'Accompagnements (4)', Icon: Wheat },
-                { id: 'naturelles', label: 'Boissons naturelles (7)', Icon: GlassWater },
-                { id: 'gazeuses', label: 'Sodas & Gazeuses (3)', Icon: CupSoda },
-                { id: 'bieres', label: 'Bières [18+] (3)', Icon: Beer },
-                { id: 'vins', label: 'Vins [18+] (3)', Icon: Wine },
-                { id: 'whiskies', label: 'Whiskies [18+] (4)', Icon: Martini }
-              ].map(cat => {
-                const isActive = activeCategory === cat.id;
-                return (
-                  <button
-                    key={cat.id}
-                    onClick={() => setActiveCategory(cat.id as any)}
-                    aria-pressed={isActive}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full font-label-md text-xs sm:text-sm whitespace-nowrap transition-all duration-200 cursor-pointer border ${
-                      isActive
-                        ? 'bg-[#e8911a] text-[#573200] border-[#e8911a] font-bold shadow-sm'
-                        : 'bg-white/90 text-[#534435] border-[#f1dfd5] hover:bg-[#fff1ec] hover:border-[#e8911a]/50 hover:text-[#241915]'
-                    }`}
-                  >
-                    <cat.Icon size={17} strokeWidth={1.9} aria-hidden="true" />
-                    <span>{cat.label}</span>
-                  </button>
-                );
-              })}
+            {/* Expandable secondary filters, displayed below the main categories */}
+            <div className="border-t border-[#ffe9e2] pt-2">
+              <button
+                type="button"
+                onClick={() => setShowSubcategories(value => !value)}
+                aria-expanded={showSubcategories}
+                className="flex items-center gap-2 mx-auto px-3 py-1.5 rounded-full text-xs font-semibold text-[#895200] hover:bg-[#fae3dc] transition-colors"
+              >
+                <span>{showSubcategories ? 'Masquer les filtres' : 'Plus de filtres'}</span>
+                <ChevronDown size={15} className={`transition-transform duration-200 ${showSubcategories ? 'rotate-180' : ''}`} />
+              </button>
+
+              <div
+                className={`grid transition-all duration-300 ease-out ${showSubcategories ? 'grid-rows-[1fr] opacity-100 mt-2' : 'grid-rows-[0fr] opacity-0'}`}
+                aria-hidden={!showSubcategories}
+              >
+                <div className="overflow-hidden">
+                  <div className="flex items-center justify-center flex-wrap gap-2 pb-1">
+                    {[
+                      { id: 'all', label: 'Tout afficher' },
+                      { id: 'popular', label: 'Populaires' },
+                      { id: 'special', label: 'Formule spéciale' }
+                    ].map(tag => (
+                      <button
+                        key={tag.id}
+                        type="button"
+                        onClick={() => setSelectedTag(tag.id as 'all' | 'popular' | 'special')}
+                        aria-pressed={selectedTag === tag.id}
+                        className={`px-3.5 py-1.5 rounded-full font-label-sm text-xs font-bold transition-all whitespace-nowrap cursor-pointer border ${
+                          selectedTag === tag.id
+                            ? 'bg-[#e8911a] text-[#573200] border-[#e8911a] shadow-sm'
+                            : 'bg-white text-[#534435] border-[#f1dfd5] hover:bg-[#fff1ec]'
+                        }`}
+                      >
+                        {tag.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
