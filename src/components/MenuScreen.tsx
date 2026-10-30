@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useRef } from 'react';
-import { Utensils, Drumstick, Wheat, GlassWater, CupSoda, Beer, Wine, Martini, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
+import { Utensils, Drumstick, Wheat, GlassWater, CupSoda, Beer, Wine, Martini, ChevronLeft, ChevronRight } from 'lucide-react';
 import { MenuItem, CartItem, MenuCategory, OrderMode, NavigationTab } from '../types';
 import { MENU_ITEMS, RESTAURANT_INFO } from '../data/menuData';
 import {
@@ -30,7 +30,6 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTag, setSelectedTag] = useState<'all' | 'new' | 'popular' | 'special'>('all');
   const [activeCategory, setActiveCategory] = useState<MenuCategory | 'all'>('all');
-  const [showSubcategories, setShowSubcategories] = useState(false);
   const categoryScrollerRef = useRef<HTMLDivElement>(null);
 
   // Filtered items
@@ -116,9 +115,9 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({
         {/* Sticky Navigation, Search & Quick Filters */}
         <div className="sticky top-20 z-40 bg-[#fff8f6]/95 backdrop-blur-md shadow-sm py-2.5 border-b border-[#ffe9e2]">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 flex flex-col gap-3">
-            {/* Search bar & Filter summary */}
-            <div className="flex flex-col sm:flex-row items-center gap-3">
-              <div className="relative w-full sm:flex-1">
+            {/* Search bar with quick filters aligned to the right */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+              <div className="relative w-full sm:flex-1 sm:min-w-0">
                 <span className="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[#534435] text-[20px]">
                   search
                 </span>
@@ -137,6 +136,27 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({
                     <span className="material-symbols-outlined text-[18px]">close</span>
                   </button>
                 )}
+              </div>
+              <div className="flex items-center justify-start sm:justify-end gap-2 flex-wrap shrink-0">
+                {[
+                  { id: 'all', label: 'Tout afficher' },
+                  { id: 'popular', label: 'Populaires' },
+                  { id: 'special', label: 'Formule spéciale' }
+                ].map(tag => (
+                  <button
+                    key={tag.id}
+                    type="button"
+                    onClick={() => setSelectedTag(tag.id as 'all' | 'popular' | 'special')}
+                    aria-pressed={selectedTag === tag.id}
+                    className={`px-3.5 py-2 rounded-full font-label-sm text-xs font-bold transition-all whitespace-nowrap cursor-pointer border ${
+                      selectedTag === tag.id
+                        ? 'bg-[#e8911a] text-[#573200] border-[#e8911a] shadow-sm'
+                        : 'bg-white text-[#534435] border-[#f1dfd5] hover:bg-[#fff1ec]'
+                    }`}
+                  >
+                    {tag.label}
+                  </button>
+                ))}
               </div>
             </div>
 
@@ -195,47 +215,6 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({
               </button>
             </div>
 
-            {/* Expandable secondary filters, displayed below the main categories */}
-            <div className="w-full border-t border-[#ffe9e2] pt-2">
-              <button
-                type="button"
-                onClick={() => setShowSubcategories(value => !value)}
-                aria-expanded={showSubcategories}
-                className="flex items-center gap-2 mx-auto px-4 py-2 rounded-full text-xs font-bold text-[#895200] bg-white border border-[#f1dfd5] shadow-sm hover:bg-[#fae3dc] transition-colors"
-              >
-                <span>{showSubcategories ? 'Masquer les filtres' : 'Plus de filtres'}</span>
-                <ChevronDown size={15} className={`transition-transform duration-200 ${showSubcategories ? 'rotate-180' : ''}`} />
-              </button>
-
-              <div
-                className={`grid transition-all duration-300 ease-out ${showSubcategories ? 'grid-rows-[1fr] opacity-100 mt-2' : 'grid-rows-[0fr] opacity-0'}`}
-                aria-hidden={!showSubcategories}
-              >
-                <div className="overflow-hidden">
-                  <div className="flex items-center justify-center flex-wrap gap-2 pb-1">
-                    {[
-                      { id: 'all', label: 'Tout afficher' },
-                      { id: 'popular', label: 'Populaires' },
-                      { id: 'special', label: 'Formule spéciale' }
-                    ].map(tag => (
-                      <button
-                        key={tag.id}
-                        type="button"
-                        onClick={() => setSelectedTag(tag.id as 'all' | 'popular' | 'special')}
-                        aria-pressed={selectedTag === tag.id}
-                        className={`px-3.5 py-1.5 rounded-full font-label-sm text-xs font-bold transition-all whitespace-nowrap cursor-pointer border ${
-                          selectedTag === tag.id
-                            ? 'bg-[#e8911a] text-[#573200] border-[#e8911a] shadow-sm'
-                            : 'bg-white text-[#534435] border-[#f1dfd5] hover:bg-[#fff1ec]'
-                        }`}
-                      >
-                        {tag.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
