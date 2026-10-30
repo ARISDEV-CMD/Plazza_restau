@@ -619,7 +619,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({
                   {alcoholBieres.length > 0 && (
                     <div className="bg-white rounded-xl p-5 shadow-sm border border-[#ffe9e2]">
                       <div className="flex items-center gap-2 mb-3">
-                        <span className="text-xl">🍺</span>
+                        <Beer size={21} strokeWidth={1.8} className="text-[#895200]" aria-hidden="true" />
                         <h3 className="font-headline-sm text-base font-bold text-[#241915]">
                           Bières fraîches du Cameroun & Importées
                         </h3>
@@ -648,7 +648,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({
                   {alcoholVins.length > 0 && (
                     <div className="bg-white rounded-xl p-5 shadow-sm border border-[#ffe9e2]">
                       <div className="flex items-center gap-2 mb-3">
-                        <span className="text-xl">🍷</span>
+                        <Wine size={21} strokeWidth={1.8} className="text-[#895200]" aria-hidden="true" />
                         <h3 className="font-headline-sm text-base font-bold text-[#241915]">
                           Vins de Sélection (Bouteille)
                         </h3>
@@ -677,7 +677,7 @@ export const MenuScreen: React.FC<MenuScreenProps> = ({
                   {alcoholWhiskies.length > 0 && (
                     <div className="bg-white rounded-xl p-5 shadow-sm border border-[#ffe9e2]">
                       <div className="flex items-center gap-2 mb-3">
-                        <span className="text-xl">🥃</span>
+                        <Martini size={21} strokeWidth={1.8} className="text-[#895200]" aria-hidden="true" />
                         <h3 className="font-headline-sm text-base font-bold text-[#241915]">
                           Whiskies & Spiritueux Prestigieux (Bouteille)
                         </h3>
